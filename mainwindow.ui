@@ -79,7 +79,7 @@
          <string notr="true">opacity:0.1</string>
         </property>
         <property name="text">
-         <string>&lt;img src=&quot;E:\School\semProject\SemProject/logo3.png&quot; width=150 style=&quot;opacity:0.1&quot;/&gt;</string>
+         <string>&lt;img src=&quot;E:School/SemProject/logo3.png&quot; width=150 style=&quot;opacity:0.1&quot;/&gt;</string>
         </property>
        </widget>
       </widget>
