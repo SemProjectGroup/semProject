@@ -24,7 +24,7 @@
        </sizepolicy>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="loadingPage">
        <widget class="QLabel" name="label">
@@ -125,6 +125,25 @@
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QPushButton" name="pushButton_4">
+            <property name="styleSheet">
+             <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+            </property>
             <property name="text">
              <string>Mark As Completed</string>
             </property>
@@ -138,6 +157,25 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="styleSheet">
+             <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+            </property>
             <property name="text">
              <string>Mark As Active</string>
             </property>
@@ -145,6 +183,25 @@
           </item>
           <item>
            <widget class="QPushButton" name="pushButton_5">
+            <property name="styleSheet">
+             <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+            </property>
             <property name="text">
              <string>Mark As Up Next</string>
             </property>
@@ -158,12 +215,44 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="styleSheet">
+             <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(255,0,0,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+            </property>
             <property name="text">
              <string>Delete</string>
             </property>
            </widget>
           </item>
          </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <layout class="QGridLayout" name="gridLayout">
@@ -176,7 +265,16 @@
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true"/>
+             <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
             </property>
             <property name="title">
              <string>Active</string>
@@ -190,6 +288,18 @@
                <height>421</height>
               </rect>
              </property>
+             <property name="styleSheet">
+              <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: white;
+ text-align: center;
+
+  padding-bottom: 5px;</string>
+             </property>
             </widget>
            </widget>
           </item>
@@ -200,6 +310,18 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
             </property>
             <property name="title">
              <string>Up Next</string>
@@ -213,6 +335,18 @@
                <height>421</height>
               </rect>
              </property>
+             <property name="styleSheet">
+              <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: white;
+ text-align: center;
+
+  padding-bottom: 5px;</string>
+             </property>
             </widget>
            </widget>
           </item>
@@ -225,7 +359,16 @@
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true"/>
+             <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
             </property>
             <property name="title">
              <string>Completed</string>
@@ -240,7 +383,16 @@
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">text-wrap:wrap;</string>
+              <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: white;
+ text-align: center;
+
+  padding-bottom: 5px;</string>
              </property>
             </widget>
            </widget>
