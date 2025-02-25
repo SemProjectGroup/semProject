@@ -1,15 +1,31 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QDebug.h>
+#include <qdebug.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
     timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(timerFunction()));
     timer->start(3000);
+
+    QListWidget *listWidget1 = ui->completedTasks;
+
+    QListWidgetItem *item= new QListWidgetItem(QIcon(),"test");
+
+
+    for (int var = 0; var < 11; ++var) {
+        ui->completedTasks->addItem("Task Number "+QString::number(var));
+        ui->completedTasks->addItem("             ");
+        ui->activeTasks->addItem("Task Number "+QString::number(var));
+        ui->activeTasks->addItem("             ");
+        ui->upNextTasks->addItem("Task Number "+QString::number(var));
+        ui->upNextTasks->addItem("             ");
+    }
 
 }
 
@@ -25,3 +41,23 @@ void MainWindow::timerFunction()
     timer->disconnect();
 
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QListWidgetItem *temp= ui->completedTasks->currentItem();
+    QModelIndex tempIndex = ui->completedTasks->indexFromItem(temp);
+
+   int count=ui->completedTasks->count();
+   qDebug()<< tempIndex.row();
+
+   ui->completedTasks->setCurrentIndex(tempIndex);
+    delete temp;
+    QListWidgetItem *temp2= ui->completedTasks->currentItem();
+    delete temp2;
+}
+

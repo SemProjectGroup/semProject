@@ -1,9 +1,15 @@
 # ninja log v6
-4	4545	7621125191731318	SemProject_autogen/timestamp	709d0d5ed04e4614
-4	4545	7621125191731318	SemProject_autogen/mocs_compilation.cpp	709d0d5ed04e4614
-4	4545	7621125191731318	E:/School/SemProject/SemProject/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/SemProject_autogen/timestamp	709d0d5ed04e4614
-4	4545	7621125191731318	E:/School/SemProject/SemProject/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/SemProject_autogen/mocs_compilation.cpp	709d0d5ed04e4614
-4549	5840	7621125192261298	CMakeFiles/SemProject.dir/main.cpp.obj	bf192d05b2ab2189
-4547	5868	7621125192241376	CMakeFiles/SemProject.dir/SemProject_autogen/mocs_compilation.cpp.obj	111c66d246d598ac
-4551	5989	7621125192281310	CMakeFiles/SemProject.dir/mainwindow.cpp.obj	8485980d2db55bab
-5989	6133	7621125206652649	SemProject.exe	9666a076569788fc
+21	189	7622101662713278	SemProject_autogen/timestamp	709d0d5ed04e4614
+21	189	7622101662713278	SemProject_autogen/mocs_compilation.cpp	709d0d5ed04e4614
+21	189	7622101662713278	E:/School/SemProject/SemProject/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/SemProject_autogen/timestamp	709d0d5ed04e4614
+21	189	7622101662713278	E:/School/SemProject/SemProject/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/SemProject_autogen/mocs_compilation.cpp	709d0d5ed04e4614
+3463	4628	7622087763007013	CMakeFiles/SemProject.dir/main.cpp.obj	bf192d05b2ab2189
+3460	4606	7622087762989445	CMakeFiles/SemProject.dir/SemProject_autogen/mocs_compilation.cpp.obj	111c66d246d598ac
+189	1558	7622101664395969	CMakeFiles/SemProject.dir/mainwindow.cpp.obj	8485980d2db55bab
+1558	1719	7622101677994856	SemProject.exe	9666a076569788fc
+21	184	7622102029034650	SemProject_autogen/timestamp	709d0d5ed04e4614
+21	184	7622102029034650	SemProject_autogen/mocs_compilation.cpp	709d0d5ed04e4614
+21	184	7622102029034650	E:/School/SemProject/SemProject/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/SemProject_autogen/timestamp	709d0d5ed04e4614
+21	184	7622102029034650	E:/School/SemProject/SemProject/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/SemProject_autogen/mocs_compilation.cpp	709d0d5ed04e4614
+184	1568	7622102030667285	CMakeFiles/SemProject.dir/mainwindow.cpp.obj	8485980d2db55bab
+1568	1708	7622102044508652	SemProject.exe	9666a076569788fc

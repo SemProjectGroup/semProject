@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>952</width>
+    <height>675</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,14 +26,14 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="LoadingPage">
+      <widget class="QWidget" name="loadingPage">
        <widget class="QLabel" name="label">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>180</y>
-          <width>681</width>
-          <height>291</height>
+          <x>-20</x>
+          <y>120</y>
+          <width>851</width>
+          <height>401</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -44,9 +44,6 @@
   font-weight: 300;
   font-size: 26px;
   color: white;
-  -webkit-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
  text-align: center;
   text-transform: uppercase;
   padding-bottom: 5px;</string>
@@ -69,8 +66,8 @@
        <widget class="QLabel" name="label_2">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>130</y>
+          <x>100</x>
+          <y>110</y>
           <width>141</width>
           <height>131</height>
          </rect>
@@ -79,11 +76,179 @@
          <string notr="true">opacity:0.1</string>
         </property>
         <property name="text">
-         <string>&lt;img src=&quot;E:School/SemProject/logo3.png&quot; width=150 style=&quot;opacity:0.1&quot;/&gt;</string>
+         <string>&lt;img src=&quot;E:\School\SemProject/logo3.png&quot; width=150 style=&quot;opacity:0.1&quot;/&gt;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_2"/>
+      <widget class="QWidget" name="navigationPage">
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>130</y>
+          <width>83</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Todo List</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="todoListPage">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="styleSheet">
+           <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+          </property>
+          <property name="text">
+           <string>&lt;h1&gt;To-Do List&lt;/h1&gt;
+&lt;hr style=&quot;background-color:'cyan'&quot; width=90%/&gt;
+</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="text">
+             <string>Mark As Completed</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Mark As Active</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="text">
+             <string>Mark As Up Next</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="1">
+           <widget class="QGroupBox" name="groupBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="title">
+             <string>Active</string>
+            </property>
+            <widget class="QListWidget" name="upNextTasks">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>281</width>
+               <height>421</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="title">
+             <string>Up Next</string>
+            </property>
+            <widget class="QListWidget" name="activeTasks">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>281</width>
+               <height>421</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="title">
+             <string>Completed</string>
+            </property>
+            <widget class="QListWidget" name="completedTasks">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>281</width>
+               <height>421</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">text-wrap:wrap;</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -93,8 +258,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>952</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
