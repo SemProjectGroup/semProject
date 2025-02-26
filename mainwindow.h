@@ -33,8 +33,18 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void updateTimer();
+    void on_startTimerButton_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_resetTimerButton_clicked();
+
+    void on_stopTimerButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer *timer;
+    QTimer *timer1;
 };
 #endif // MAINWINDOW_H
