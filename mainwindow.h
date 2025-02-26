@@ -24,7 +24,12 @@ public slots:
     void timerFunction();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_todoNavButton_clicked();
+
+    void on_deleteItemButton_clicked();
+
+    void on_pomodoroNavButton_clicked();
 
     void on_pushButton_2_clicked();
 

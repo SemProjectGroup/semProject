@@ -42,12 +42,8 @@ void MainWindow::timerFunction()
 
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
-}
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_deleteItemButton_clicked()
 {
     QListWidgetItem *temp= ui->completedTasks->currentItem();
     QModelIndex tempIndex = ui->completedTasks->indexFromItem(temp);
@@ -59,5 +55,40 @@ void MainWindow::on_pushButton_2_clicked()
     delete temp;
     QListWidgetItem *temp2= ui->completedTasks->currentItem();
     delete temp2;
+}
+
+
+void MainWindow::on_todoNavButton_clicked()
+{
+     ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+
+void MainWindow::on_pomodoroNavButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+int count=0;
+void MainWindow::on_pushButton_2_clicked()
+{
+
+    count++;
+    if(count==1){
+    ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/fullHourGlass.png' >");
+    }
+    if(count==2){
+        ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/threeQuarterHourGlass.png' >");
+    }
+    if(count==3){
+        ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/halfHourGlass.png' >");
+    }
+    if(count==4){
+        ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/quarterHourGlass.png' >");
+    }
+    if(count==5){
+        ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/emptyHourGlass.png' >");
+    }
 }
 

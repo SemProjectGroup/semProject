@@ -76,12 +76,12 @@
          <string notr="true">opacity:0.1</string>
         </property>
         <property name="text">
-         <string>&lt;img src=&quot;E:\School\SemProject/logo3.png&quot; width=150 style=&quot;opacity:0.1&quot;/&gt;</string>
+         <string>&lt;img src=&quot;E:\School\SemProject\logo3.png&quot; width=150 style=&quot;opacity:0.1&quot;/&gt;</string>
         </property>
        </widget>
       </widget>
       <widget class="QWidget" name="navigationPage">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="todoNavButton">
         <property name="geometry">
          <rect>
           <x>690</x>
@@ -130,6 +130,55 @@ click buttont to go to todo list page
          <set>Qt::AlignmentFlag::AlignCenter</set>
         </property>
        </widget>
+       <widget class="QPushButton" name="pomodoroNavButton">
+        <property name="geometry">
+         <rect>
+          <x>500</x>
+          <y>560</y>
+          <width>83</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pomodoro</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="pomodoroPage">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="hourGlassImageLabel">
+            <property name="text">
+             <string>&lt;img src=&quot;E:\School\SemProject/fullHourGlass.png&quot; &quot;/&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QComboBox" name="comboBox_3"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="todoListPage">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -160,7 +209,7 @@ click buttont to go to todo list page
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="markCompleteButton">
             <property name="styleSheet">
              <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 16px;
@@ -202,7 +251,7 @@ background-color:rgba(0,255,255,0.5);
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="markActiveButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
               <horstretch>0</horstretch>
@@ -250,7 +299,7 @@ background-color:rgba(0,255,255,0.5);
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="markUpNextButton">
             <property name="styleSheet">
              <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 16px;
@@ -292,7 +341,7 @@ background-color:rgba(0,255,255,0.5);
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="deleteItemButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
               <horstretch>0</horstretch>
@@ -414,7 +463,7 @@ background-color:rgba(0,255,255,0.7);
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="addItemButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
               <horstretch>0</horstretch>
