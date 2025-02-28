@@ -1,5 +1,6 @@
 H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/semProjectAlpha_autogen/EWIEGA46WW/moc_pomodoropage.cpp: H:/semProjectAlpha/pomodoropage.h \
   H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/semProjectAlpha_autogen/moc_predefs.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h \
@@ -14,6 +15,7 @@ H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/semProjectAlpha_aut
   C:/Qt/6.8.1/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -104,6 +106,7 @@ H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/semProjectAlpha_aut
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.8.1/mingw_64/include/QtCore/qtimer.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.8.1/mingw_64/include/QtCore/qtpreprocessorsupport.h \

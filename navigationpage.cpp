@@ -1,5 +1,5 @@
 #include "NavigationPage.h"
-#include "ui_NavigationPage.h"
+#include "ui_navigationpage.h""
 
 NavigationPage::NavigationPage(QWidget *parent)
     : QWidget(parent), ui(new Ui::NavigationPage)
@@ -16,3 +16,11 @@ NavigationPage::~NavigationPage()
 {
     delete ui;
 }
+
+void NavigationPage::on_pushButton_clicked()
+{
+    navigateToPomodoro();
+}
+
+
+

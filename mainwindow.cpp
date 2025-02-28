@@ -4,6 +4,7 @@
 #include "NavigationPage.h"
 #include "ToDoListPage.h"
 #include "HabitTrackerPage.h"
+#include "PomodoroPage.h"
 
 #include <QDebug.h>
 
@@ -21,17 +22,20 @@ MainWindow::MainWindow(QWidget *parent)
     navigationPage = new NavigationPage(this);
     toDoListPage = new ToDoListPage(this);
     habitTrackerPage = new HabitTrackerPage(this);
+    pomodoroPage = new PomodoroPage(this);
 
     stackedWidget->addWidget(landingPage);
     stackedWidget->addWidget(navigationPage);
     stackedWidget->addWidget(toDoListPage);
     stackedWidget->addWidget(habitTrackerPage);
+    stackedWidget->addWidget(pomodoroPage);
 
     stackedWidget->setCurrentWidget(landingPage);
 
     connect(landingPage, &LandingPage::navigateToNavigationPage, this, &MainWindow::switchToNavigationPage);
     connect(navigationPage, &NavigationPage::navigateToToDoList, this, &MainWindow::switchToToDoListPage);
     connect(navigationPage, &NavigationPage::navigateToHabitTracker, this, &MainWindow::switchToHabitTrackerPage);
+    connect(navigationPage, &NavigationPage::navigateToPomodoro, this, &MainWindow::switchToPomodoroPage);
 }
 
 MainWindow::~MainWindow()
@@ -58,4 +62,10 @@ void MainWindow::switchToToDoListPage()
 void MainWindow::switchToHabitTrackerPage()
 {
     stackedWidget->setCurrentWidget(habitTrackerPage);
+}
+
+void MainWindow::switchToPomodoroPage()
+{
+    qDebug()<<"Reached here";
+    stackedWidget->setCurrentWidget(pomodoroPage);
 }

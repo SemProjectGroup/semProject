@@ -2,6 +2,7 @@
 #define POMODOROPAGE_H
 
 #include <QWidget>
+#include <QTimer>
 
 namespace Ui {
 class PomodoroPage;
@@ -15,8 +16,21 @@ public:
     explicit PomodoroPage(QWidget *parent = nullptr);
     ~PomodoroPage();
 
+private slots:
+    void updateTimer();
+
+    void on_startTimerButton_clicked();
+
+    void on_resetTimerButton_clicked();
+
+    void on_stopTimerButton_clicked();
+
 private:
     Ui::PomodoroPage *ui;
+
+    QTimer *timer;
+
+
 };
 
 #endif // POMODOROPAGE_H

@@ -18,6 +18,10 @@ public:
 signals:
     void navigateToToDoList();
     void navigateToHabitTracker();
+    void navigateToPomodoro();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::NavigationPage *ui;

@@ -21,6 +21,7 @@ class Ui_NavigationPage
 public:
     QPushButton *toDoListButton;
     QPushButton *habitTrackerButton;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *NavigationPage)
     {
@@ -33,6 +34,9 @@ public:
         habitTrackerButton = new QPushButton(NavigationPage);
         habitTrackerButton->setObjectName("habitTrackerButton");
         habitTrackerButton->setGeometry(QRect(220, 140, 83, 29));
+        pushButton = new QPushButton(NavigationPage);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(60, 220, 83, 29));
 
         retranslateUi(NavigationPage);
 
@@ -44,6 +48,7 @@ public:
         NavigationPage->setWindowTitle(QCoreApplication::translate("NavigationPage", "Form", nullptr));
         toDoListButton->setText(QCoreApplication::translate("NavigationPage", "toDoListButton", nullptr));
         habitTrackerButton->setText(QCoreApplication::translate("NavigationPage", "habitTrackerButton", nullptr));
+        pushButton->setText(QCoreApplication::translate("NavigationPage", "PushButton", nullptr));
     } // retranslateUi
 
 };

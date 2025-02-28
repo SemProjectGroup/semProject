@@ -1453,6 +1453,7 @@ H:/semProjectAlpha/mainwindow.h
  mdp:H:/semProjectAlpha/mainwindow.h
 H:/semProjectAlpha/pomodoropage.h
  mmc:Q_OBJECT
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/QTimer
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20functional.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20iterator.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/q20memory.h
@@ -1467,6 +1468,7 @@ H:/semProjectAlpha/pomodoropage.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qatomic.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qbasictimer.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qbindingstorage.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearray.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -1557,6 +1559,7 @@ H:/semProjectAlpha/pomodoropage.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtextstream.h
+ mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtimer.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtmetamacros.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtnoop.h
  mdp:C:/Qt/6.8.1/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -1813,7 +1816,7 @@ H:/semProjectAlpha/pomodoropage.h
  mdp:H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/semProjectAlpha_autogen/moc_predefs.h
  mdp:H:/semProjectAlpha/pomodoropage.h
 H:/semProjectAlpha/navigationpage.cpp
- uic:ui_NavigationPage.h
+ uic:ui_navigationpage.h
 H:/semProjectAlpha/main.cpp
 H:/semProjectAlpha/habittrackerpage.cpp
  uic:ui_HabitTrackerPage.h
