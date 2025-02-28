@@ -8,6 +8,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
+    //Migrating from main to master
     ui->setupUi(this);
     this->setFixedHeight(1000);
     this->setFixedWidth(1600);
