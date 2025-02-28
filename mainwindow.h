@@ -29,6 +29,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+
+
     QStackedWidget *stackedWidget;
     LandingPage *landingPage;
     NavigationPage *navigationPage;

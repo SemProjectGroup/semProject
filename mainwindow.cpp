@@ -5,6 +5,8 @@
 #include "ToDoListPage.h"
 #include "HabitTrackerPage.h"
 
+#include <QDebug.h>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -45,6 +47,7 @@ void MainWindow::switchToLandingPage()
 void MainWindow::switchToNavigationPage()
 {
     stackedWidget->setCurrentWidget(navigationPage);
+    qDebug()<< "switchToNav function called";
 }
 
 void MainWindow::switchToToDoListPage()

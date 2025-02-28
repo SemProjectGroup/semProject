@@ -6,24 +6,66 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1600</width>
+    <height>1000</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QPushButton" name="startButton">
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>180</x>
      <y>120</y>
-     <width>83</width>
-     <height>29</height>
+     <width>351</width>
+     <height>261</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">opacity:0.1</string>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>&lt;img src=&quot;E:\School\SemProject\logo3.png&quot; width=300 style=&quot;opacity:0.1&quot;/&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>220</y>
+     <width>1291</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 54px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+   </property>
+   <property name="text">
+    <string>&lt;div&gt;
+&lt;h1&gt;Let's Be Productive&lt;/h1&gt;
+&lt;hr style=&quot;background-color:'cyan'&quot; width=80%/&gt;
+&lt;p style=&quot;  text-transform: none; font-size:28px&quot;&gt;The productivity app for all students&lt;/p&gt;
+&lt;/div&gt;
+</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::TextFormat::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
  </widget>

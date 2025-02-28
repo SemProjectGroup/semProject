@@ -1,5 +1,7 @@
 #include "LandingPage.h"
 #include "ui_LandingPage.h"
+#include <QDebug.h>
+#include <qdebug.h>
 
 LandingPage::LandingPage(QWidget *parent)
     : QWidget(parent), ui(new Ui::LandingPage)
@@ -7,7 +9,19 @@ LandingPage::LandingPage(QWidget *parent)
     ui->setupUi(this);
     this->setFixedHeight(1000);
     this->setFixedWidth(1600);
-    connect(ui->startButton, &QPushButton::clicked, this, &LandingPage::navigateToNavigationPage);
+
+
+    timer1 = new QTimer(this);
+    connect(timer1, &QTimer::timeout,this,&LandingPage::timerFunction);
+    timer1->start(2000);
+
+
+}
+
+void LandingPage::timerFunction(){
+    qDebug()<<"Reacher to the second page";
+    navigateToNavigationPage();
+    timer1->disconnect();
 }
 
 LandingPage::~LandingPage()
