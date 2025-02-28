@@ -81,9 +81,9 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QGridLayout *gridLayout;
     QGroupBox *groupBox;
-    QListWidget *upNextTasks;
-    QGroupBox *groupBox_2;
     QListWidget *activeTasks;
+    QGroupBox *groupBox_2;
+    QListWidget *upNestTasks;
     QGroupBox *groupBox_3;
     QListWidget *completedTasks;
 
@@ -616,10 +616,10 @@ public:
 " text-align: center;\n"
 "  text-transform: uppercase;\n"
 "  padding-bottom: 5px;"));
-        upNextTasks = new QListWidget(groupBox);
-        upNextTasks->setObjectName("upNextTasks");
-        upNextTasks->setGeometry(QRect(10, 30, 361, 481));
-        upNextTasks->setStyleSheet(QString::fromUtf8(" position: relative;\n"
+        activeTasks = new QListWidget(groupBox);
+        activeTasks->setObjectName("activeTasks");
+        activeTasks->setGeometry(QRect(10, 30, 361, 481));
+        activeTasks->setStyleSheet(QString::fromUtf8(" position: relative;\n"
 "  padding: 0;\n"
 "  margin: 0;\n"
 "  font-family: \"Raleway\", sans-serif;\n"
@@ -646,10 +646,10 @@ public:
 " text-align: center;\n"
 "  text-transform: uppercase;\n"
 "  padding-bottom: 5px;"));
-        activeTasks = new QListWidget(groupBox_2);
-        activeTasks->setObjectName("activeTasks");
-        activeTasks->setGeometry(QRect(10, 30, 361, 481));
-        activeTasks->setStyleSheet(QString::fromUtf8(" position: relative;\n"
+        upNestTasks = new QListWidget(groupBox_2);
+        upNestTasks->setObjectName("upNestTasks");
+        upNestTasks->setGeometry(QRect(10, 30, 361, 481));
+        upNestTasks->setStyleSheet(QString::fromUtf8(" position: relative;\n"
 "  padding: 0;\n"
 "  margin: 0;\n"
 "  font-family: \"Raleway\", sans-serif;\n"

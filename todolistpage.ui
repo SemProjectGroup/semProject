@@ -920,7 +920,7 @@ background-color:rgba(30,255,30,0.3);
          <property name="title">
           <string>Active</string>
          </property>
-         <widget class="QListWidget" name="upNextTasks">
+         <widget class="QListWidget" name="activeTasks">
           <property name="geometry">
            <rect>
             <x>10</x>
@@ -967,7 +967,7 @@ background-color:rgba(30,255,30,0.3);
          <property name="title">
           <string>Up Next</string>
          </property>
-         <widget class="QListWidget" name="activeTasks">
+         <widget class="QListWidget" name="upNestTasks">
           <property name="geometry">
            <rect>
             <x>10</x>
