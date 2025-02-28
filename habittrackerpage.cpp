@@ -8,7 +8,6 @@ HabitTrackerPage::HabitTrackerPage(QWidget *parent)
     this->setFixedHeight(1000);
     this->setFixedWidth(1600);
 
-    // Example: Add a label to the page
     ui->titleLabel->setText("Habit Tracker Page");
     ui->titleLabel->setAlignment(Qt::AlignCenter);
 }

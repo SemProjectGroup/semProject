@@ -6,25 +6,1048 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1600</width>
+    <height>1000</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="titleLabel">
+  <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>180</y>
-     <width>63</width>
-     <height>20</height>
+     <x>220</x>
+     <y>80</y>
+     <width>1161</width>
+     <height>841</height>
     </rect>
    </property>
-   <property name="text">
-    <string>titleLabel</string>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
+   <property name="currentIndex">
+    <number>3</number>
+   </property>
+   <widget class="QWidget" name="loadingPage">
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>-20</x>
+       <y>120</y>
+       <width>901</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+     </property>
+     <property name="text">
+      <string>&lt;div&gt;
+&lt;h1&gt;Let's Be Productive&lt;/h1&gt;
+&lt;hr style=&quot;background-color:'cyan'&quot; width=80%/&gt;
+&lt;p style=&quot;  text-transform: none; font-size:14px&quot;&gt;The productivity app for all students&lt;/p&gt;
+&lt;/div&gt;
+</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::TextFormat::AutoText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>130</y>
+       <width>141</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">opacity:0.1</string>
+     </property>
+     <property name="text">
+      <string>&lt;img src=&quot;E:\School\SemProject\logo3.png&quot; width=150 style=&quot;opacity:0.1&quot;/&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="navigationPage">
+    <widget class="QPushButton" name="todoNavButton">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>530</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Todo List</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>50</y>
+       <width>901</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+     </property>
+     <property name="text">
+      <string>&lt;div&gt;
+&lt;h2&gt;This is the navigation page&lt;/h2&gt;
+&lt;p style=&quot;  text-transform: none; font-size:14px&quot;&gt;Iti s a work in progress&lt;/p&gt;
+click buttont to go to todo list page
+&lt;/div&gt;
+</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::TextFormat::AutoText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pomodoroNavButton">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>560</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pomodoro</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="pomodoroPage">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+       </property>
+       <property name="text">
+        <string>&lt;h1&gt;POMODORO TIMER&lt;/h1&gt;
+&lt;hr style=&quot;background-color:'cyan'&quot; width=80%/&gt;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="hourGlassImageLabel">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>&lt;img src=&quot;E:\School\SemProject\fullHourGlass.png&quot; /&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Policy::Maximum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>5</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+           </property>
+           <property name="text">
+            <string>       Set Timern       &lt;hr  style=&quot;background-color:cyan&quot;&gt;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="timeLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 128px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+           </property>
+           <property name="text">
+            <string>00:00</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="timerComboBox">
+           <property name="styleSheet">
+            <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.8);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>10 minutes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>15 minutes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>20 minutes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>30 minutes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>45 minutes</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>60 minutes</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="startTimerButton">
+           <property name="styleSheet">
+            <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.5);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+           </property>
+           <property name="text">
+            <string>StartTimer</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="stopTimerButton">
+           <property name="styleSheet">
+            <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(255,0,0,0.5);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+           </property>
+           <property name="text">
+            <string>Stop Timer</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="resetTimerButton">
+           <property name="styleSheet">
+            <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(255,0,0,0.5);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+           </property>
+           <property name="text">
+            <string>Reset Timer</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="todoListPage">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+       </property>
+       <property name="text">
+        <string>&lt;h1&gt;To-Do List&lt;/h1&gt;
+&lt;hr style=&quot;background-color:'cyan'&quot; width=90%/&gt;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="markCompleteButton">
+         <property name="styleSheet">
+          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+         </property>
+         <property name="text">
+          <string>Mark As Completed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="markActiveButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+         </property>
+         <property name="text">
+          <string>Mark As Active</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="markUpNextButton">
+         <property name="styleSheet">
+          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+         </property>
+         <property name="text">
+          <string>Mark As Up Next</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>13</width>
+           <height>32</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deleteItemButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(255,0,0,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+         </property>
+         <property name="text">
+          <string>Delete</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="newToDoLineEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+         </property>
+         <property name="placeholderText">
+          <string>New To-do list Item</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(0,255,255,0.7);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Completed</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Active</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Up Next</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addItemButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(30,255,30,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+         </property>
+         <property name="text">
+          <string>+Add</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+         </property>
+         <property name="title">
+          <string>Active</string>
+         </property>
+         <widget class="QListWidget" name="upNextTasks">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>361</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+ text-align: center;
+
+  padding-bottom: 5px;</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+         </property>
+         <property name="title">
+          <string>Up Next</string>
+         </property>
+         <widget class="QListWidget" name="activeTasks">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>361</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+ text-align: center;
+
+  padding-bottom: 5px;</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+         </property>
+         <property name="title">
+          <string>Completed</string>
+         </property>
+         <widget class="QListWidget" name="completedTasks">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>30</y>
+            <width>361</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+ text-align: center;
+
+  padding-bottom: 5px;</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
  </widget>
  <resources/>
