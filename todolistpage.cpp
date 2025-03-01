@@ -41,11 +41,11 @@ void ToDoListPage::on_markCompleteButton_clicked()
     if(temp == 0x0){
         qDebug()<< "oxo";
     }
-    if(temp != 0x0){
+    if(temp){
         ui->completedTasks->addItem(temp->text());
         deleteItemFromActiveSection();
     }
-    if(temp2 != 0x0){
+    if(temp2 ){
         ui->completedTasks->addItem(temp2->text());
         deleteItemFromUpNestSection();
     }
@@ -63,11 +63,11 @@ void ToDoListPage::on_markActiveButton_clicked()
 
     qDebug()<<temp;
     qDebug()<<temp2;
-    if(temp != 0x0){
+    if(temp){
         ui->activeTasks->addItem(temp->text());
         deleteItemFromCompletedSection();
     }
-    if(temp2 != 0x0){
+    if(temp2){
         ui->activeTasks->addItem(temp2->text());
         deleteItemFromUpNestSection();
     }
@@ -84,11 +84,11 @@ void ToDoListPage::on_markUpNextButton_clicked()
 
     qDebug()<<temp;
     qDebug()<<temp2;
-    if(temp != 0x0){
+    if(temp){
         ui->upNestTasks->addItem(temp->text());
        deleteItemFromActiveSection();
     }
-    if(temp2 != 0x0){
+    if(temp2){
         ui->upNestTasks->addItem(temp2->text());
         deleteItemFromCompletedSection();
     }
