@@ -4,11 +4,14 @@
 #include <QDebug.h>
 
 ToDoListPage::ToDoListPage(QWidget *parent)
-    : QWidget(parent), ui(new Ui::ToDoListPage)
+    : QWidget(parent), ui(new Ui::ToDoListPage),
+    firebaseManager(new FirebaseManager(this))
 {
     ui->setupUi(this);
     this->setFixedHeight(1000);
     this->setFixedWidth(1600);
+
+    connect(firebaseManager, &FirebaseManager::dataReceived, this, &ToDoListPage::onDataReceived);
 
     //random dummy data for now
     ui->activeTasks->addItem("             ");
@@ -23,6 +26,8 @@ ToDoListPage::ToDoListPage(QWidget *parent)
         ui->activeTasks->addItem("Task Number "+QString::number(var));
         ui->activeTasks->addItem("             ");
     }
+    firebaseManager->getData("tasks");
+
 
 }
 
@@ -112,19 +117,91 @@ void ToDoListPage::on_addItemButton_clicked()
     if(ui->comboBox->currentIndex()==0){
         ui->completedTasks->addItem(ui->newToDoLineEdit->text());
         ui->completedTasks->addItem("             ");
+
+        QString taskName = ui->newToDoLineEdit->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "completed";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+        }
+        ToDoListPage::onTaskAdded(1);
     }
 
     if(ui->comboBox->currentIndex()==1){
         ui->activeTasks->addItem(ui->newToDoLineEdit->text());
         ui->activeTasks->addItem("             ");
+
+        QString taskName = ui->newToDoLineEdit->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "active";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+        }
+        ToDoListPage::onTaskAdded(1);
     }
 
     if(ui->comboBox->currentIndex()==2){
         ui->upNestTasks->addItem(ui->newToDoLineEdit->text());
         ui->upNestTasks->addItem("             ");
+
+        QString taskName = ui->newToDoLineEdit->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "upNext";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+        }
+        ToDoListPage::onTaskAdded(1);
     }
 
+
+
 }
+
+void ToDoListPage::onDataReceived(const QJsonObject &data)
+{
+    ui->activeTasks->clear();
+    ui->completedTasks->clear();
+    ui->upNestTasks->clear();
+
+
+    for (const QString &key : data.keys()) {
+        QJsonObject task = data.value(key).toObject();
+        QString taskName = task.value("name").toString();
+        QString tag = task.value("tag").toString();
+
+
+        qDebug()<<taskName;
+        qDebug()<<tag;
+
+
+        QListWidgetItem *item = new QListWidgetItem(taskName);
+
+        if(tag == "completed"){
+            ui->completedTasks->addItem(item);
+        }
+        if(tag == "active"){
+            ui->activeTasks->addItem(item);
+        }
+        if(tag == "active"){
+            ui->upNestTasks->addItem(item);
+        }
+
+    }
+}
+
+void ToDoListPage::onTaskAdded(bool success)
+{
+    if(success){
+        qDebug()<<"Task added successfully";
+    }
+}
+
 
 
 void ToDoListPage::deleteItemFromCompletedSection(){

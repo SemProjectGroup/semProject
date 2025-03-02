@@ -1,6 +1,8 @@
 #ifndef TODOLISTPAGE_H
 #define TODOLISTPAGE_H
 
+#include "FirebaseManager.h"
+
 #include <QWidget>
 
 namespace Ui {
@@ -31,8 +33,13 @@ private slots:
 
     void on_addItemButton_clicked();
 
+    void onDataReceived(const QJsonObject &data);
+
+    void onTaskAdded(bool success);
+
 private:
     Ui::ToDoListPage *ui;
+    FirebaseManager *firebaseManager;
 
 };
 

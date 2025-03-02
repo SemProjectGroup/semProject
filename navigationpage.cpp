@@ -1,5 +1,5 @@
 #include "NavigationPage.h"
-#include "ui_navigationpage.h""
+#include "ui_navigationpage.h"
 
 NavigationPage::NavigationPage(QWidget *parent)
     : QWidget(parent), ui(new Ui::NavigationPage)

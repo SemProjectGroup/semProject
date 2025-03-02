@@ -11,6 +11,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt6 COMPONENTS Core Gui Widgets Network)
+
+if (Qt6_FOUND)
+    message(STATUS "Using Qt6")
+    set(QT_LIBRARIES Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Network)
+else()
+
+    # Fallback to Qt5
+    find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Network)
+    message(STATUS "Using Qt5")
+    set(QT_LIBRARIES Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Network)
+endif()
 
 set(PROJECT_SOURCES
         main.cpp
@@ -29,6 +41,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         pomodoropage.h pomodoropage.cpp pomodoropage.ui
         navigationpage.h navigationpage.cpp navigationpage.ui
         todolistpage.h todolistpage.cpp todolistpage.ui
+        FirebaseManager.h
+        FirebaseManager.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET semProjectAlpha APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -48,7 +62,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(semProjectAlpha PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(semProjectAlpha PRIVATE ${QT_LIBRARIES})
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
