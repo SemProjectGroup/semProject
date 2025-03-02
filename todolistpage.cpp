@@ -13,6 +13,8 @@ ToDoListPage::ToDoListPage(QWidget *parent)
 
     connect(firebaseManager, &FirebaseManager::dataReceived, this, &ToDoListPage::onDataReceived);
 
+    connect(firebaseManager, &FirebaseManager::checkIfDataExistsFinished, this, &ToDoListPage::oncheckReplyFinished);
+
     //random dummy data for now
     ui->activeTasks->addItem("             ");
     ui->upNestTasks->addItem("             ");
@@ -52,10 +54,31 @@ void ToDoListPage::on_markCompleteButton_clicked()
     if(temp){
         ui->completedTasks->addItem(temp->text());
         deleteItemFromActiveSection();
+
+        QString taskName = temp->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "completed";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+            ToDoListPage::onTaskAdded(1);
+        }
+
     }
     if(temp2 ){
         ui->completedTasks->addItem(temp2->text());
         deleteItemFromUpNestSection();
+
+        QString taskName = temp2->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "completed";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+            ToDoListPage::onTaskAdded(1);
+        }
     }
 
      ui->completedTasks->addItem("             ");
@@ -74,10 +97,30 @@ void ToDoListPage::on_markActiveButton_clicked()
     if(temp){
         ui->activeTasks->addItem(temp->text());
         deleteItemFromCompletedSection();
+
+        QString taskName = temp->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "completed";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+            ToDoListPage::onTaskAdded(1);
+        }
     }
     if(temp2){
         ui->activeTasks->addItem(temp2->text());
         deleteItemFromUpNestSection();
+
+        QString taskName = temp2->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "completed";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+            ToDoListPage::onTaskAdded(1);
+        }
     }
 
     ui->activeTasks->addItem("             ");
@@ -95,10 +138,30 @@ void ToDoListPage::on_markUpNextButton_clicked()
     if(temp){
         ui->upNestTasks->addItem(temp->text());
        deleteItemFromActiveSection();
+
+        QString taskName = temp->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "completed";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+            ToDoListPage::onTaskAdded(1);
+        }
     }
     if(temp2){
         ui->upNestTasks->addItem(temp2->text());
         deleteItemFromCompletedSection();
+
+        QString taskName = temp2->text();
+        if (!taskName.isEmpty()) {
+            QJsonObject taskJSONObject;
+            taskJSONObject["name"] = taskName;
+            taskJSONObject["tag"] = "completed";
+
+            firebaseManager->postData("tasks", taskJSONObject);
+            ToDoListPage::onTaskAdded(1);
+        }
     }
 
     ui->upNestTasks->addItem("             ");
@@ -166,7 +229,6 @@ void ToDoListPage::on_addItemButton_clicked()
     }
 
 
-
 }
 
 void ToDoListPage::onDataReceived(const QJsonObject &data)
@@ -187,6 +249,10 @@ void ToDoListPage::onDataReceived(const QJsonObject &data)
 
 
         QListWidgetItem *item = new QListWidgetItem(taskName);
+        qDebug()<<'test etst test';
+        qDebug()<<"THis is the key when recieving data";
+        qDebug()<<key;
+        item->setData(Qt::UserRole, key);
 
         if(tag == "completed"){
             ui->completedTasks->addItem(item);
@@ -207,6 +273,15 @@ void ToDoListPage::onDataReceived(const QJsonObject &data)
     }
 }
 
+void ToDoListPage::oncheckReplyFinished(bool success)
+{
+    if(success){
+        qDebug()<<"Task exists";
+    }else {
+        qDebug() << "Task doesd not exist";
+    }
+}
+
 void ToDoListPage::onTaskAdded(bool success)
 {
     if(success){
@@ -219,7 +294,7 @@ void ToDoListPage::onTaskAdded(bool success)
 void ToDoListPage::onDeleteFinished(bool success)
 {
     if (success) {
-        qDebug()<<"Task added successfully";
+        qDebug()<<"Task deleted successfully";
     } else {
         qDebug() << "Failed to delete item.";
     }
@@ -236,23 +311,21 @@ void ToDoListPage::deleteItemFromCompletedSection(){
     ui->completedTasks->setCurrentIndex(tempIndex);
     if(temp){
         QString key = temp->data(Qt::UserRole).toString();
-        firebaseManager->deleteData(key);
+        qDebug()<<"hello this is the key";
+        qDebug()<<"tasks/"+key;
+        qDebug()<<"checkingifdataexists";
+        firebaseManager->checkIfDataExists("tasks",key);
+        firebaseManager->deleteData("tasks/"+key);
         delete temp;
+        ToDoListPage::onDeleteFinished(1);
 
-    }
-
-    QListWidgetItem *temp2= ui->completedTasks->currentItem();
-    if(temp2){
-        QString key = temp2->data(Qt::UserRole).toString();
-        firebaseManager->deleteData(key);
-            delete temp2;
     }
 
     ui->completedTasks->setCurrentIndex(ui->completedTasks->indexFromItem(temp));
 }
 
 void ToDoListPage::deleteItemFromActiveSection(){
-    QListWidgetItem *temp= ui->upNestTasks->currentItem();
+    QListWidgetItem *temp= ui->activeTasks->currentItem();
     QModelIndex tempIndex = ui->upNestTasks->indexFromItem(temp);
 
     int count=ui->upNestTasks->count();
@@ -261,21 +334,18 @@ void ToDoListPage::deleteItemFromActiveSection(){
     ui->upNestTasks->setCurrentIndex(tempIndex);
     if(temp){
         QString key = temp->data(Qt::UserRole).toString();
-        firebaseManager->deleteData(key);
+        firebaseManager->deleteData("tasks/"+key);
         delete temp;
+        ToDoListPage::onDeleteFinished(1);
     }
-    QListWidgetItem *temp2= ui->upNestTasks->currentItem();
-    if(temp2){
-        QString key = temp2->data(Qt::UserRole).toString();
-        firebaseManager->deleteData(key);
-        delete temp2;
-    }
+
+
     ui->upNestTasks->setCurrentIndex(ui->completedTasks->indexFromItem(temp));
 
 };
 
 void ToDoListPage::deleteItemFromUpNestSection(){
-    QListWidgetItem *temp= ui->activeTasks->currentItem();
+    QListWidgetItem *temp= ui->upNestTasks->currentItem();
     QModelIndex tempIndex = ui->activeTasks->indexFromItem(temp);
 
     int count=ui->activeTasks->count();
@@ -284,15 +354,11 @@ void ToDoListPage::deleteItemFromUpNestSection(){
     ui->activeTasks->setCurrentIndex(tempIndex);
     if(temp){
         QString key = temp->data(Qt::UserRole).toString();
-        firebaseManager->deleteData(key);
+        firebaseManager->deleteData("tasks/"+key);
         delete temp;
+        ToDoListPage::onDeleteFinished(1);
     }
-    QListWidgetItem *temp2= ui->activeTasks->currentItem();
-    if(temp2){
-        QString key = temp2->data(Qt::UserRole).toString();
-        firebaseManager->deleteData(key);
-        delete temp2;
-    }
+
     ui->activeTasks->setCurrentIndex(ui->completedTasks->indexFromItem(temp));
 
 };

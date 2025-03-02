@@ -48,6 +48,35 @@ void FirebaseManager::postData(const QString &path, const QJsonObject &data)
     connect(reply, &QNetworkReply::finished, this, [this, reply]() { onPostReplyFinished(reply); });
 }
 
+void FirebaseManager::checkIfDataExists(const QString &path, const QString &key)
+{
+    QString fullUrl = baseUrl + path + key+".json";
+    QNetworkRequest request;
+    request.setUrl(QUrl(fullUrl));
+
+    QNetworkReply *reply = networkManager->get(request);
+    connect(reply, &QNetworkReply::finished, this, [this, reply]() { onGetReplyFinished(reply); });
+     qDebug() << "thsi message is from Inside checkIfDataExistsFunction " ;
+     qDebug() << "the path is "+baseUrl+path+key+ ".json" ;
+
+    if (!reply->error()) {
+        QByteArray responseData = reply->readAll();
+        QJsonDocument jsonResponse = QJsonDocument::fromJson(responseData);
+        if (!jsonResponse.isNull()) {
+            qDebug() << "Data does exist :" ;
+            emit checkIfDataExistsFinished(1);
+
+        }else{
+            qDebug()<<"data is empty";
+        }
+
+    } else {
+        qDebug() << "Data does not exist Error:" ;
+        emit checkIfDataExistsFinished(0);
+
+    }
+}
+
 void FirebaseManager::deleteData(const QString &path)
 {
     QString fullUrl = baseUrl + path + ".json";
@@ -81,6 +110,18 @@ void FirebaseManager::onPostReplyFinished(QNetworkReply *reply)
     } else {
         qDebug() << "POST Error:" ;
         emit postFinished(false);
+    }
+
+    reply->deleteLater();
+}
+
+void FirebaseManager::oncheckReplyFinished(QNetworkReply *reply)
+{
+    if (!reply->error()) {
+        emit checkIfDataExistsFinished(true);
+    } else {
+        qDebug() << "POST Error:" ;
+        emit checkIfDataExistsFinished(false);
     }
 
     reply->deleteLater();
