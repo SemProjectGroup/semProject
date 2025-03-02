@@ -184,12 +184,18 @@ void ToDoListPage::onDataReceived(const QJsonObject &data)
 
         if(tag == "completed"){
             ui->completedTasks->addItem(item);
+            ui->upNestTasks->addItem("             ");
+
         }
         if(tag == "active"){
             ui->activeTasks->addItem(item);
+            ui->upNestTasks->addItem("             ");
+
         }
-        if(tag == "active"){
+        if(tag == "upNext"){
             ui->upNestTasks->addItem(item);
+            ui->upNestTasks->addItem("             ");
+
         }
 
     }
