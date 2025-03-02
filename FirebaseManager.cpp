@@ -48,6 +48,17 @@ void FirebaseManager::postData(const QString &path, const QJsonObject &data)
     connect(reply, &QNetworkReply::finished, this, [this, reply]() { onPostReplyFinished(reply); });
 }
 
+void FirebaseManager::deleteData(const QString &path)
+{
+    QString fullUrl = baseUrl + path + ".json";
+    QNetworkRequest request;
+    request.setUrl(QUrl(fullUrl));
+
+    QNetworkReply *reply = networkManager->deleteResource(request);
+    connect(reply, &QNetworkReply::finished, this, [this, reply]() { onDeleteReplyFinished(reply); });
+}
+
+
 void FirebaseManager::onGetReplyFinished(QNetworkReply *reply)
 {
     if (!reply->error()) {
@@ -70,6 +81,18 @@ void FirebaseManager::onPostReplyFinished(QNetworkReply *reply)
     } else {
         qDebug() << "POST Error:" ;
         emit postFinished(false);
+    }
+
+    reply->deleteLater();
+}
+
+void FirebaseManager::onDeleteReplyFinished(QNetworkReply *reply)
+{
+    if (reply->error() == QNetworkReply::NoError) {
+        emit deleteFinished(true);
+    } else {
+        qDebug() << "DELETE Error:" << reply->errorString();
+        emit deleteFinished(false);
     }
 
     reply->deleteLater();

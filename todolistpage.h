@@ -35,6 +35,8 @@ private slots:
 
     void onDataReceived(const QJsonObject &data);
 
+    void onDeleteFinished(bool success);
+
     void onTaskAdded(bool success);
 
 private:
