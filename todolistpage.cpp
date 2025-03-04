@@ -273,6 +273,8 @@ void ToDoListPage::onDataReceived(const QJsonObject &data)
     }
 }
 
+//this is not necessary (was trying to fix a bug, but somehow the bug is gone
+
 void ToDoListPage::oncheckReplyFinished(bool success)
 {
     if(success){
@@ -281,6 +283,8 @@ void ToDoListPage::oncheckReplyFinished(bool success)
         qDebug() << "Task doesd not exist";
     }
 }
+
+//
 
 void ToDoListPage::onTaskAdded(bool success)
 {

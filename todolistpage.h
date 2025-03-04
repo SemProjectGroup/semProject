@@ -35,6 +35,7 @@ private slots:
 
     void onDataReceived(const QJsonObject &data);
 
+    //this is not necessary (was trying to fix a bug, but somehow the bug is gone
     void oncheckReplyFinished(bool success);
 
     void onDeleteFinished(bool success);

@@ -31,7 +31,6 @@ void  FirebaseManager::getData(const QString &path)
 
     }
 
-
 }
 
 void FirebaseManager::postData(const QString &path, const QJsonObject &data)
@@ -47,6 +46,8 @@ void FirebaseManager::postData(const QString &path, const QJsonObject &data)
     QNetworkReply *reply = networkManager->post(request, jsonData);
     connect(reply, &QNetworkReply::finished, this, [this, reply]() { onPostReplyFinished(reply); });
 }
+
+//this is not necessary (was trying to fix a bug, but somehow the bug is gone
 
 void FirebaseManager::checkIfDataExists(const QString &path, const QString &key)
 {
@@ -76,6 +77,8 @@ void FirebaseManager::checkIfDataExists(const QString &path, const QString &key)
 
     }
 }
+
+//
 
 void FirebaseManager::deleteData(const QString &path)
 {
@@ -115,6 +118,8 @@ void FirebaseManager::onPostReplyFinished(QNetworkReply *reply)
     reply->deleteLater();
 }
 
+//this is not necessary (was trying to fix a bug, but somehow the bug is gone
+
 void FirebaseManager::oncheckReplyFinished(QNetworkReply *reply)
 {
     if (!reply->error()) {
@@ -126,6 +131,7 @@ void FirebaseManager::oncheckReplyFinished(QNetworkReply *reply)
 
     reply->deleteLater();
 }
+//
 
 void FirebaseManager::onDeleteReplyFinished(QNetworkReply *reply)
 {
