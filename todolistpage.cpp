@@ -102,7 +102,7 @@ void ToDoListPage::on_markActiveButton_clicked()
         if (!taskName.isEmpty()) {
             QJsonObject taskJSONObject;
             taskJSONObject["name"] = taskName;
-            taskJSONObject["tag"] = "completed";
+            taskJSONObject["tag"] = "active";
 
             firebaseManager->postData("tasks", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
@@ -116,7 +116,7 @@ void ToDoListPage::on_markActiveButton_clicked()
         if (!taskName.isEmpty()) {
             QJsonObject taskJSONObject;
             taskJSONObject["name"] = taskName;
-            taskJSONObject["tag"] = "completed";
+            taskJSONObject["tag"] = "active";
 
             firebaseManager->postData("tasks", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
@@ -143,7 +143,7 @@ void ToDoListPage::on_markUpNextButton_clicked()
         if (!taskName.isEmpty()) {
             QJsonObject taskJSONObject;
             taskJSONObject["name"] = taskName;
-            taskJSONObject["tag"] = "completed";
+            taskJSONObject["tag"] = "upNest";
 
             firebaseManager->postData("tasks", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
@@ -157,7 +157,7 @@ void ToDoListPage::on_markUpNextButton_clicked()
         if (!taskName.isEmpty()) {
             QJsonObject taskJSONObject;
             taskJSONObject["name"] = taskName;
-            taskJSONObject["tag"] = "completed";
+            taskJSONObject["tag"] = "upNest";
 
             firebaseManager->postData("tasks", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
@@ -221,7 +221,7 @@ void ToDoListPage::on_addItemButton_clicked()
         if (!taskName.isEmpty()) {
             QJsonObject taskJSONObject;
             taskJSONObject["name"] = taskName;
-            taskJSONObject["tag"] = "upNext";
+            taskJSONObject["tag"] = "upNest";
 
             firebaseManager->postData("tasks", taskJSONObject);
         }
@@ -264,7 +264,7 @@ void ToDoListPage::onDataReceived(const QJsonObject &data)
             ui->activeTasks->addItem("             ");
 
         }
-        if(tag == "upNext"){
+        if(tag == "upNest"){
             ui->upNestTasks->addItem(item);
             ui->upNestTasks->addItem("             ");
 
@@ -312,6 +312,9 @@ void ToDoListPage::deleteItemFromCompletedSection(){
     int count=ui->completedTasks->count();
     qDebug()<< tempIndex.row();
 
+    qDebug()<<"This is from completed tasks";
+    qDebug()<< temp;
+
     ui->completedTasks->setCurrentIndex(tempIndex);
     if(temp){
         QString key = temp->data(Qt::UserRole).toString();
@@ -335,6 +338,9 @@ void ToDoListPage::deleteItemFromActiveSection(){
     int count=ui->upNestTasks->count();
     qDebug()<< tempIndex.row();
 
+    qDebug()<<"This is from active tasks";
+    qDebug()<< temp;
+
     ui->upNestTasks->setCurrentIndex(tempIndex);
     if(temp){
         QString key = temp->data(Qt::UserRole).toString();
@@ -350,19 +356,27 @@ void ToDoListPage::deleteItemFromActiveSection(){
 
 void ToDoListPage::deleteItemFromUpNestSection(){
     QListWidgetItem *temp= ui->upNestTasks->currentItem();
-    QModelIndex tempIndex = ui->activeTasks->indexFromItem(temp);
+    QModelIndex tempIndex = ui->upNestTasks->indexFromItem(temp);
 
-    int count=ui->activeTasks->count();
+    int count=ui->upNestTasks->count();
     qDebug()<< tempIndex.row();
 
-    ui->activeTasks->setCurrentIndex(tempIndex);
+    qDebug()<<"This is from completed tasks";
+    qDebug()<< temp;
+
+    ui->upNestTasks->setCurrentIndex(tempIndex);
     if(temp){
         QString key = temp->data(Qt::UserRole).toString();
+        qDebug()<<"hello this is the key";
+        qDebug()<<"tasks/"+key;
+        qDebug()<<"checkingifdataexists";
+        firebaseManager->checkIfDataExists("tasks",key);
         firebaseManager->deleteData("tasks/"+key);
         delete temp;
         ToDoListPage::onDeleteFinished(1);
+
     }
 
-    ui->activeTasks->setCurrentIndex(ui->completedTasks->indexFromItem(temp));
+    ui->upNestTasks->setCurrentIndex(ui->upNestTasks->indexFromItem(temp));
 
 };

@@ -13,18 +13,426 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="titleLabel">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>30</y>
-     <width>63</width>
-     <height>20</height>
+     <x>270</x>
+     <y>130</y>
+     <width>988</width>
+     <height>133</height>
     </rect>
    </property>
-   <property name="text">
-    <string>TextLabel</string>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
+   <property name="styleSheet">
+    <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+   </property>
+   <property name="text">
+    <string>&lt;h1&gt;Habit Tracker&lt;/h1&gt;
+&lt;hr style=&quot;background-color:'cyan'&quot; width=80%/&gt;
+</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>250</y>
+     <width>1061</width>
+     <height>671</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+
+
+border-color: white;
+background-color:rgba(0,255,255,0.01);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+height: 45;</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Tab 1</string>
+    </attribute>
+    <widget class="QWidget" name="formLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>0</y>
+       <width>1051</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Policy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+background-color: rgba(0,0,0,0);
+border:0px;</string>
+        </property>
+        <property name="text">
+         <string>Woke up at    </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QTimeEdit" name="timeEdit">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:152;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+height: 45;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+background-color: rgba(0,0,0,0);
+border:0px;</string>
+        </property>
+        <property name="text">
+         <string>Went to sleep at                  </string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTimeEdit" name="timeEdit_2">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:152;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+height: 45;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+background-color: rgba(0,0,0,0);
+border:0px;</string>
+        </property>
+        <property name="text">
+         <string>Pages Read                             </string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QSpinBox" name="spinBox_3">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:152;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+height: 45;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="styleSheet">
+         <string notr="true">
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+background-color: rgba(0,0,0,0);
+border:0px;</string>
+        </property>
+        <property name="text">
+         <string>Exercise time                         </string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QSpinBox" name="spinBox_4">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:152;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+height: 45;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="styleSheet">
+         <string notr="true">
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+background-color: rgba(0,0,0,0);
+border:0px;</string>
+        </property>
+        <property name="text">
+         <string>Steps walked</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QSpinBox" name="spinBox_5">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:152;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+height: 45;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="styleSheet">
+         <string notr="true">
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+background-color: rgba(0,0,0,0);
+border:0px;</string>
+        </property>
+        <property name="text">
+         <string>Expenses</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QSpinBox" name="spinBox_6">
+        <property name="styleSheet">
+         <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:152;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+height: 45;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>540</y>
+       <width>170</width>
+       <height>59</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Submit Data</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>145</x>
+       <y>550</y>
+       <width>341</width>
+       <height>59</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Reset all</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Tab 2</string>
+    </attribute>
+   </widget>
   </widget>
  </widget>
  <resources/>
