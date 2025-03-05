@@ -20,7 +20,7 @@ GraphWidget::GraphWidget(QWidget *parent)
     setLayout(layout);
 }
 
-void GraphWidget::setData(const QMap<QDateTime, qreal> &data, const QString &title)
+void GraphWidget::setData(const QMap<QDateTime, qreal> &data, const QString &title,qreal ymin, qreal ymax)
 {
 
     series->clear();
@@ -49,7 +49,7 @@ void GraphWidget::setData(const QMap<QDateTime, qreal> &data, const QString &tit
 
     QValueAxis *axisY = new QValueAxis;
     axisY->setTitleText(title);
-    axisY->setRange(0, 100);
+    axisY->setRange(ymin, ymax);
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
 

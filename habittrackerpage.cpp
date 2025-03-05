@@ -10,6 +10,8 @@
 #include <QtCharts/QHorizontalStackedBarSeries>
 #include <QtCharts/qpieseries.h>
 
+using namespace std;
+
 HabitTrackerPage::HabitTrackerPage(QWidget *parent)
     : QWidget(parent), ui(new Ui::HabitTrackerPage),
     firebaseManager(new FirebaseManager(this))
@@ -182,12 +184,18 @@ void HabitTrackerPage::onDataReceived(const QJsonObject &data)
 
 void HabitTrackerPage::displayGraphs()
 {
-    wakeUpGraph->setData(wakeUpData, "Wake-up Time");
-    sleepGraph->setData(sleepData, "Sleep Time");
-    pagesReadGraph->setData(pagesReadData, "Pages Read");
-    exerciseGraph->setData(exerciseData, "Exercise Time (minutes)");
-    stepsWalkedGraph->setData(stepsWalkedData, "Steps Walked");
-    expensesGraph->setData(expensesData, "Expenses");
+
+    qreal maxPagesRead = *max_element(pagesReadData.begin(), pagesReadData.end());
+    qreal maxExerciseTime = *max_element(exerciseData.begin(), exerciseData.end());
+    qreal maxStepsWalked = *max_element(stepsWalkedData.begin(), stepsWalkedData.end());
+    qreal maxExpenses = *max_element(expensesData.begin(), expensesData.end());
+
+    wakeUpGraph->setData(wakeUpData, "Wake-up Time", 0, 24);
+    sleepGraph->setData(sleepData, "Sleep Time", 0, 24);
+    pagesReadGraph->setData(pagesReadData, "Pages Read", 0, maxPagesRead + 10);
+    exerciseGraph->setData(exerciseData, "Exercise Time (minutes)", 0, maxExerciseTime + 10);
+    stepsWalkedGraph->setData(stepsWalkedData, "Steps Walked", 0, maxStepsWalked + 1000);
+    expensesGraph->setData(expensesData, "Expenses", 0, maxExpenses + 100);
 }
 
 void HabitTrackerPage::on_submitDataButton_clicked()

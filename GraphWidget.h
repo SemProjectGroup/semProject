@@ -14,7 +14,7 @@
 
 public:
     explicit GraphWidget(QWidget *parent = nullptr);
-    void setData(const QMap<QDateTime, qreal> &data, const QString &title);
+    void setData(const QMap<QDateTime, qreal> &data, const QString &title,qreal ymin, qreal ymax);
 
 private:
     QChartView *chartView;
