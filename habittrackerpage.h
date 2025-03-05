@@ -3,6 +3,9 @@
 
 #include <QWidget>
 
+#include "FirebaseManager.h"
+
+
 namespace Ui {
 class HabitTrackerPage;
 }
@@ -15,8 +18,17 @@ public:
     explicit HabitTrackerPage(QWidget *parent = nullptr);
     ~HabitTrackerPage();
 
+private slots:
+    void on_resetAllButton_clicked();
+
+    void onPostFinished(bool success);
+
+    void on_submitDataButton_clicked();
+
 private:
     Ui::HabitTrackerPage *ui;
+    FirebaseManager *firebaseManager;
+
 };
 
 #endif

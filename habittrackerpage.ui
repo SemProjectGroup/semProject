@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>130</y>
+     <y>90</y>
      <width>988</width>
      <height>133</height>
     </rect>
@@ -52,10 +52,10 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>210</x>
      <y>250</y>
-     <width>1061</width>
-     <height>671</height>
+     <width>1181</width>
+     <height>731</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -90,8 +90,8 @@ height: 45;</string>
       <rect>
        <x>-10</x>
        <y>0</y>
-       <width>1051</width>
-       <height>531</height>
+       <width>1171</width>
+       <height>481</height>
       </rect>
      </property>
      <layout class="QFormLayout" name="formLayout">
@@ -139,7 +139,7 @@ border:0px;</string>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QTimeEdit" name="timeEdit">
+       <widget class="QTimeEdit" name="wokeUpAtTimeEdit">
         <property name="styleSheet">
          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 20px;
@@ -179,12 +179,12 @@ background-color: rgba(0,0,0,0);
 border:0px;</string>
         </property>
         <property name="text">
-         <string>Went to sleep at                  </string>
+         <string>Went to sleep at                </string>
         </property>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QTimeEdit" name="timeEdit_2">
+       <widget class="QTimeEdit" name="wenttoSleepAtTimeEdit">
         <property name="styleSheet">
          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 20px;
@@ -224,12 +224,12 @@ background-color: rgba(0,0,0,0);
 border:0px;</string>
         </property>
         <property name="text">
-         <string>Pages Read                             </string>
+         <string>Pages Read                          </string>
         </property>
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QSpinBox" name="spinBox_3">
+       <widget class="QSpinBox" name="pagesReadSpinBox">
         <property name="styleSheet">
          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 20px;
@@ -269,12 +269,12 @@ background-color: rgba(0,0,0,0);
 border:0px;</string>
         </property>
         <property name="text">
-         <string>Exercise time                         </string>
+         <string>Exercise time                     </string>
         </property>
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QSpinBox" name="spinBox_4">
+       <widget class="QSpinBox" name="exerciseTimeSpinBox">
         <property name="styleSheet">
          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 20px;
@@ -319,7 +319,7 @@ border:0px;</string>
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QSpinBox" name="spinBox_5">
+       <widget class="QSpinBox" name="stepsWalkedSpinBox">
         <property name="styleSheet">
          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 20px;
@@ -364,7 +364,7 @@ border:0px;</string>
        </widget>
       </item>
       <item row="6" column="1">
-       <widget class="QSpinBox" name="spinBox_6">
+       <widget class="QSpinBox" name="expensesSpinBox">
         <property name="styleSheet">
          <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 20px;
@@ -389,12 +389,12 @@ height: 45;</string>
       </item>
      </layout>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="submitDataButton">
      <property name="geometry">
       <rect>
-       <x>660</x>
-       <y>540</y>
-       <width>170</width>
+       <x>590</x>
+       <y>500</y>
+       <width>345</width>
        <height>59</height>
       </rect>
      </property>
@@ -404,15 +404,34 @@ height: 45;</string>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(30,255,30,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+     </property>
      <property name="text">
       <string>Submit Data</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="resetAllButton">
      <property name="geometry">
       <rect>
-       <x>145</x>
-       <y>550</y>
+       <x>120</x>
+       <y>500</y>
        <width>341</width>
        <height>59</height>
       </rect>
@@ -422,6 +441,25 @@ height: 45;</string>
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: white;
+background-color:rgba(255,0,0,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
      </property>
      <property name="text">
       <string>Reset all</string>

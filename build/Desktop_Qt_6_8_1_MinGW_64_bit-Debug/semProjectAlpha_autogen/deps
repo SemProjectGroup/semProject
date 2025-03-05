@@ -611,6 +611,7 @@ semProjectAlpha_autogen/timestamp: \
 	H:/semProjectAlpha/CMakeLists.txt \
 	H:/semProjectAlpha/FirebaseManager.cpp \
 	H:/semProjectAlpha/FirebaseManager.h \
+	H:/semProjectAlpha/HabitTrackerPage.h \
 	H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \

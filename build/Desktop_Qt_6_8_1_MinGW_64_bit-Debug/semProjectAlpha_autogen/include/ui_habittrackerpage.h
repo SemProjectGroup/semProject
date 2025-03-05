@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
@@ -29,19 +30,21 @@ public:
     QWidget *tab;
     QWidget *formLayoutWidget;
     QFormLayout *formLayout;
-    QLabel *label;
-    QTimeEdit *timeEdit;
-    QLabel *label_2;
-    QTimeEdit *timeEdit_2;
-    QLabel *label_3;
-    QSpinBox *spinBox_3;
-    QLabel *label_4;
-    QSpinBox *spinBox_4;
-    QLabel *label_6;
-    QSpinBox *spinBox_5;
-    QLabel *label_7;
-    QSpinBox *spinBox_6;
     QSpacerItem *horizontalSpacer;
+    QLabel *label;
+    QTimeEdit *wokeUpAtTimeEdit;
+    QLabel *label_2;
+    QTimeEdit *wenttoSleepAtTimeEdit;
+    QLabel *label_3;
+    QSpinBox *pagesReadSpinBox;
+    QLabel *label_4;
+    QSpinBox *exerciseTimeSpinBox;
+    QLabel *label_6;
+    QSpinBox *stepsWalkedSpinBox;
+    QLabel *label_7;
+    QSpinBox *expensesSpinBox;
+    QPushButton *submitDataButton;
+    QPushButton *resetAllButton;
     QWidget *tab_2;
 
     void setupUi(QWidget *HabitTrackerPage)
@@ -70,7 +73,7 @@ public:
         label_5->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tabWidget = new QTabWidget(HabitTrackerPage);
         tabWidget->setObjectName("tabWidget");
-        tabWidget->setGeometry(QRect(250, 250, 1061, 671));
+        tabWidget->setGeometry(QRect(210, 250, 1071, 661));
         tabWidget->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
@@ -93,10 +96,14 @@ public:
         tab->setObjectName("tab");
         formLayoutWidget = new QWidget(tab);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(-10, 0, 1051, 391));
+        formLayoutWidget->setGeometry(QRect(-10, 0, 1051, 421));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Minimum);
+
+        formLayout->setItem(0, QFormLayout::LabelRole, horizontalSpacer);
+
         label = new QLabel(formLayoutWidget);
         label->setObjectName("label");
         QSizePolicy sizePolicy1(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Preferred);
@@ -119,9 +126,9 @@ public:
 
         formLayout->setWidget(1, QFormLayout::LabelRole, label);
 
-        timeEdit = new QTimeEdit(formLayoutWidget);
-        timeEdit->setObjectName("timeEdit");
-        timeEdit->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
+        wokeUpAtTimeEdit = new QTimeEdit(formLayoutWidget);
+        wokeUpAtTimeEdit->setObjectName("wokeUpAtTimeEdit");
+        wokeUpAtTimeEdit->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
 "  text-decoration: none;\n"
@@ -140,7 +147,7 @@ public:
 "  touch-action: manipulation;\n"
 "height: 45;"));
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, timeEdit);
+        formLayout->setWidget(1, QFormLayout::FieldRole, wokeUpAtTimeEdit);
 
         label_2 = new QLabel(formLayoutWidget);
         label_2->setObjectName("label_2");
@@ -159,9 +166,9 @@ public:
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_2);
 
-        timeEdit_2 = new QTimeEdit(formLayoutWidget);
-        timeEdit_2->setObjectName("timeEdit_2");
-        timeEdit_2->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
+        wenttoSleepAtTimeEdit = new QTimeEdit(formLayoutWidget);
+        wenttoSleepAtTimeEdit->setObjectName("wenttoSleepAtTimeEdit");
+        wenttoSleepAtTimeEdit->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
 "  text-decoration: none;\n"
@@ -180,7 +187,7 @@ public:
 "  touch-action: manipulation;\n"
 "height: 45;"));
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, timeEdit_2);
+        formLayout->setWidget(2, QFormLayout::FieldRole, wenttoSleepAtTimeEdit);
 
         label_3 = new QLabel(formLayoutWidget);
         label_3->setObjectName("label_3");
@@ -199,9 +206,9 @@ public:
 
         formLayout->setWidget(3, QFormLayout::LabelRole, label_3);
 
-        spinBox_3 = new QSpinBox(formLayoutWidget);
-        spinBox_3->setObjectName("spinBox_3");
-        spinBox_3->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
+        pagesReadSpinBox = new QSpinBox(formLayoutWidget);
+        pagesReadSpinBox->setObjectName("pagesReadSpinBox");
+        pagesReadSpinBox->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
 "  text-decoration: none;\n"
@@ -220,7 +227,7 @@ public:
 "  touch-action: manipulation;\n"
 "height: 45;"));
 
-        formLayout->setWidget(3, QFormLayout::FieldRole, spinBox_3);
+        formLayout->setWidget(3, QFormLayout::FieldRole, pagesReadSpinBox);
 
         label_4 = new QLabel(formLayoutWidget);
         label_4->setObjectName("label_4");
@@ -239,9 +246,9 @@ public:
 
         formLayout->setWidget(4, QFormLayout::LabelRole, label_4);
 
-        spinBox_4 = new QSpinBox(formLayoutWidget);
-        spinBox_4->setObjectName("spinBox_4");
-        spinBox_4->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
+        exerciseTimeSpinBox = new QSpinBox(formLayoutWidget);
+        exerciseTimeSpinBox->setObjectName("exerciseTimeSpinBox");
+        exerciseTimeSpinBox->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
 "  text-decoration: none;\n"
@@ -260,7 +267,7 @@ public:
 "  touch-action: manipulation;\n"
 "height: 45;"));
 
-        formLayout->setWidget(4, QFormLayout::FieldRole, spinBox_4);
+        formLayout->setWidget(4, QFormLayout::FieldRole, exerciseTimeSpinBox);
 
         label_6 = new QLabel(formLayoutWidget);
         label_6->setObjectName("label_6");
@@ -279,9 +286,9 @@ public:
 
         formLayout->setWidget(5, QFormLayout::LabelRole, label_6);
 
-        spinBox_5 = new QSpinBox(formLayoutWidget);
-        spinBox_5->setObjectName("spinBox_5");
-        spinBox_5->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
+        stepsWalkedSpinBox = new QSpinBox(formLayoutWidget);
+        stepsWalkedSpinBox->setObjectName("stepsWalkedSpinBox");
+        stepsWalkedSpinBox->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
 "  text-decoration: none;\n"
@@ -300,7 +307,7 @@ public:
 "  touch-action: manipulation;\n"
 "height: 45;"));
 
-        formLayout->setWidget(5, QFormLayout::FieldRole, spinBox_5);
+        formLayout->setWidget(5, QFormLayout::FieldRole, stepsWalkedSpinBox);
 
         label_7 = new QLabel(formLayoutWidget);
         label_7->setObjectName("label_7");
@@ -319,9 +326,9 @@ public:
 
         formLayout->setWidget(6, QFormLayout::LabelRole, label_7);
 
-        spinBox_6 = new QSpinBox(formLayoutWidget);
-        spinBox_6->setObjectName("spinBox_6");
-        spinBox_6->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
+        expensesSpinBox = new QSpinBox(formLayoutWidget);
+        expensesSpinBox->setObjectName("expensesSpinBox");
+        expensesSpinBox->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
 "  text-decoration: none;\n"
@@ -340,12 +347,58 @@ public:
 "  touch-action: manipulation;\n"
 "height: 45;"));
 
-        formLayout->setWidget(6, QFormLayout::FieldRole, spinBox_6);
+        formLayout->setWidget(6, QFormLayout::FieldRole, expensesSpinBox);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Minimum);
-
-        formLayout->setItem(0, QFormLayout::LabelRole, horizontalSpacer);
-
+        submitDataButton = new QPushButton(tab);
+        submitDataButton->setObjectName("submitDataButton");
+        submitDataButton->setGeometry(QRect(590, 500, 345, 59));
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(submitDataButton->sizePolicy().hasHeightForWidth());
+        submitDataButton->setSizePolicy(sizePolicy2);
+        submitDataButton->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
+"  font-size: 20px;\n"
+"  letter-spacing: 2px;\n"
+"  text-decoration: none;\n"
+"  text-transform: uppercase;\n"
+"  color: white;\n"
+"  cursor: pointer;\n"
+"  border: 3px solid;\n"
+"border-radius:15;\n"
+"border-color: white;\n"
+"background-color:rgba(30,255,30,0.3);\n"
+"  padding: 0.25em 0.5em;\n"
+"  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;\n"
+"  position: relative;\n"
+"  user-select: none;\n"
+"  -webkit-user-select: none;\n"
+"  touch-action: manipulation;"));
+        resetAllButton = new QPushButton(tab);
+        resetAllButton->setObjectName("resetAllButton");
+        resetAllButton->setGeometry(QRect(120, 500, 341, 59));
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(resetAllButton->sizePolicy().hasHeightForWidth());
+        resetAllButton->setSizePolicy(sizePolicy3);
+        resetAllButton->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
+"  font-size: 20px;\n"
+"  letter-spacing: 2px;\n"
+"  text-decoration: none;\n"
+"  text-transform: uppercase;\n"
+"  color: white;\n"
+"  cursor: pointer;\n"
+"  border: 3px solid;\n"
+"border-radius:15;\n"
+"border-color: white;\n"
+"background-color:rgba(255,0,0,0.3);\n"
+"  padding: 0.25em 0.5em;\n"
+"  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;\n"
+"  position: relative;\n"
+"  user-select: none;\n"
+"  -webkit-user-select: none;\n"
+"  touch-action: manipulation;"));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
@@ -366,11 +419,13 @@ public:
 "<hr style=\"background-color:'cyan'\" width=80%/>\n"
 "", nullptr));
         label->setText(QCoreApplication::translate("HabitTrackerPage", "Woke up at    ", nullptr));
-        label_2->setText(QCoreApplication::translate("HabitTrackerPage", "Went to sleep at                  ", nullptr));
-        label_3->setText(QCoreApplication::translate("HabitTrackerPage", "Pages Read                             ", nullptr));
-        label_4->setText(QCoreApplication::translate("HabitTrackerPage", "Exercise time                         ", nullptr));
+        label_2->setText(QCoreApplication::translate("HabitTrackerPage", "Went to sleep at                ", nullptr));
+        label_3->setText(QCoreApplication::translate("HabitTrackerPage", "Pages Read                          ", nullptr));
+        label_4->setText(QCoreApplication::translate("HabitTrackerPage", "Exercise time                     ", nullptr));
         label_6->setText(QCoreApplication::translate("HabitTrackerPage", "Steps walked", nullptr));
         label_7->setText(QCoreApplication::translate("HabitTrackerPage", "Expenses", nullptr));
+        submitDataButton->setText(QCoreApplication::translate("HabitTrackerPage", "Submit Data", nullptr));
+        resetAllButton->setText(QCoreApplication::translate("HabitTrackerPage", "Reset all", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("HabitTrackerPage", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("HabitTrackerPage", "Tab 2", nullptr));
     } // retranslateUi

@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../../../../habittrackerpage.h"
+#include <QtNetwork/QSslError>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -37,7 +38,12 @@ struct qt_meta_tag_ZN16HabitTrackerPageE_t {};
 
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN16HabitTrackerPageE = QtMocHelpers::stringData(
-    "HabitTrackerPage"
+    "HabitTrackerPage",
+    "on_resetAllButton_clicked",
+    "",
+    "onPostFinished",
+    "success",
+    "on_submitDataButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -49,12 +55,22 @@ Q_CONSTINIT static const uint qt_meta_data_ZN16HabitTrackerPageE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       1,    0,   32,    2, 0x08,    1 /* Private */,
+       3,    1,   33,    2, 0x08,    2 /* Private */,
+       5,    0,   36,    2, 0x08,    4 /* Private */,
+
+ // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,    4,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -67,7 +83,14 @@ Q_CONSTINIT const QMetaObject HabitTrackerPage::staticMetaObject = { {
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN16HabitTrackerPageE_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<HabitTrackerPage, std::true_type>
+        QtPrivate::TypeAndForceComplete<HabitTrackerPage, std::true_type>,
+        // method 'on_resetAllButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onPostFinished'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'on_submitDataButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -75,10 +98,14 @@ Q_CONSTINIT const QMetaObject HabitTrackerPage::staticMetaObject = { {
 void HabitTrackerPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<HabitTrackerPage *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->on_resetAllButton_clicked(); break;
+        case 1: _t->onPostFinished((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 2: _t->on_submitDataButton_clicked(); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObject *HabitTrackerPage::metaObject() const
@@ -97,6 +124,18 @@ void *HabitTrackerPage::qt_metacast(const char *_clname)
 int HabitTrackerPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 3)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 3;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 3)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 3;
+    }
     return _id;
 }
 QT_WARNING_POP

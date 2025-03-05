@@ -8,6 +8,7 @@
 #include <QJsonObject>
 #include <QProcessEnvironment>
 
+
 class FirebaseManager : public QObject
 {
     Q_OBJECT
