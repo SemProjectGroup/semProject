@@ -14,6 +14,10 @@ GraphWidget::GraphWidget(QWidget *parent)
 
     chartView->setMinimumSize(800, 800);
 
+    chart->setDropShadowEnabled(true);
+
+    chart->setAnimationOptions(QChart::AllAnimations);
+    chart->setAnimationDuration(5000);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(chartView);
@@ -36,6 +40,10 @@ void GraphWidget::setData(const QMap<QDateTime, qreal> &data, const QString &tit
         series->append(it.key().toMSecsSinceEpoch(), it.value());
     }
 
+    QPen pen(Qt::cyan);
+    pen.setWidth(4);
+    series->setPen(pen);
+
 
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
@@ -54,7 +62,18 @@ void GraphWidget::setData(const QMap<QDateTime, qreal> &data, const QString &tit
     series->attachAxis(axisY);
 
 
-    chart->setTitle(title);
+    chart->setTitle("<h1 style='font-size:72px'>"+title+"</h1>");
+
+    chart->setBackgroundBrush(QBrush(QColor(30, 30, 30)));
+    chart->setPlotAreaBackgroundBrush(QBrush(QColor(20, 40, 40)));
+    chart->setPlotAreaBackgroundVisible(true);
+
+    QPen axisPen(Qt::white);
+    axisX->setLinePen(axisPen);
+    axisY->setLinePen(axisPen);
+
+    axisX->setLabelsColor(Qt::white);
+    axisY->setLabelsColor(Qt::white);
 
 
     qDebug() << "X-Axis Range:" << axisX->min().toString("yyyy-MM-dd HH:mm:ss") << "to" << axisX->max().toString("yyyy-MM-dd HH:mm:ss");
