@@ -12,8 +12,10 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
@@ -26,6 +28,9 @@ QT_BEGIN_NAMESPACE
 class Ui_HabitTrackerPage
 {
 public:
+    QVBoxLayout *verticalLayout_2;
+    QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *horizontalSpacer_3;
     QLabel *label_5;
     QTabWidget *tabWidget;
     QWidget *tab;
@@ -47,7 +52,9 @@ public:
     QPushButton *submitDataButton;
     QPushButton *resetAllButton;
     QWidget *tab_2;
-    QWidget *verticalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents_2;
     QVBoxLayout *verticalLayout;
 
     void setupUi(QWidget *HabitTrackerPage)
@@ -55,9 +62,18 @@ public:
         if (HabitTrackerPage->objectName().isEmpty())
             HabitTrackerPage->setObjectName("HabitTrackerPage");
         HabitTrackerPage->resize(1600, 1000);
+        verticalLayout_2 = new QVBoxLayout(HabitTrackerPage);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        verticalLayout_2->addItem(horizontalSpacer_2);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        verticalLayout_2->addItem(horizontalSpacer_3);
+
         label_5 = new QLabel(HabitTrackerPage);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(270, 90, 988, 133));
         QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Maximum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -74,9 +90,11 @@ public:
 "  text-transform: uppercase;\n"
 "  padding-bottom: 5px;"));
         label_5->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout_2->addWidget(label_5);
+
         tabWidget = new QTabWidget(HabitTrackerPage);
         tabWidget->setObjectName("tabWidget");
-        tabWidget->setGeometry(QRect(210, 250, 1181, 731));
         tabWidget->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
@@ -99,7 +117,7 @@ public:
         tab->setObjectName("tab");
         formLayoutWidget = new QWidget(tab);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(-10, 0, 1171, 481));
+        formLayoutWidget->setGeometry(QRect(160, 0, 1171, 492));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -229,6 +247,7 @@ public:
 "  -webkit-user-select: none;\n"
 "  touch-action: manipulation;\n"
 "height: 45;"));
+        pagesReadSpinBox->setMaximum(2147483647);
 
         formLayout->setWidget(3, QFormLayout::FieldRole, pagesReadSpinBox);
 
@@ -269,6 +288,7 @@ public:
 "  -webkit-user-select: none;\n"
 "  touch-action: manipulation;\n"
 "height: 45;"));
+        exerciseTimeSpinBox->setMaximum(2147483647);
 
         formLayout->setWidget(4, QFormLayout::FieldRole, exerciseTimeSpinBox);
 
@@ -309,6 +329,7 @@ public:
 "  -webkit-user-select: none;\n"
 "  touch-action: manipulation;\n"
 "height: 45;"));
+        stepsWalkedSpinBox->setMaximum(2147483647);
 
         formLayout->setWidget(5, QFormLayout::FieldRole, stepsWalkedSpinBox);
 
@@ -349,12 +370,13 @@ public:
 "  -webkit-user-select: none;\n"
 "  touch-action: manipulation;\n"
 "height: 45;"));
+        expensesSpinBox->setMaximum(2147483647);
 
         formLayout->setWidget(6, QFormLayout::FieldRole, expensesSpinBox);
 
         submitDataButton = new QPushButton(tab);
         submitDataButton->setObjectName("submitDataButton");
-        submitDataButton->setGeometry(QRect(590, 500, 345, 59));
+        submitDataButton->setGeometry(QRect(800, 520, 345, 59));
         QSizePolicy sizePolicy2(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -379,7 +401,7 @@ public:
 "  touch-action: manipulation;"));
         resetAllButton = new QPushButton(tab);
         resetAllButton->setObjectName("resetAllButton");
-        resetAllButton->setGeometry(QRect(120, 500, 341, 59));
+        resetAllButton->setGeometry(QRect(310, 520, 341, 59));
         QSizePolicy sizePolicy3(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
@@ -405,17 +427,28 @@ public:
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
-        verticalLayoutWidget = new QWidget(tab_2);
-        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(0, 0, 1151, 681));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        horizontalLayout = new QHBoxLayout(tab_2);
+        horizontalLayout->setObjectName("horizontalLayout");
+        scrollArea = new QScrollArea(tab_2);
+        scrollArea->setObjectName("scrollArea");
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName("scrollAreaWidgetContents_2");
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1506, 685));
+        verticalLayout = new QVBoxLayout(scrollAreaWidgetContents_2);
         verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        scrollArea->setWidget(scrollAreaWidgetContents_2);
+
+        horizontalLayout->addWidget(scrollArea);
+
         tabWidget->addTab(tab_2, QString());
+
+        verticalLayout_2->addWidget(tabWidget);
+
 
         retranslateUi(HabitTrackerPage);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(HabitTrackerPage);

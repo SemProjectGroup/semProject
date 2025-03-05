@@ -1,14 +1,19 @@
 #include "GraphWidget.h"
 #include <QVBoxLayout>
 #include <QDateTime>
+#include <QDebug>
 
 GraphWidget::GraphWidget(QWidget *parent)
     : QWidget(parent), chartView(new QChartView(this)), chart(new QChart()), series(new QLineSeries())
 {
+
     chart->addSeries(series);
     chart->legend()->hide();
     chartView->setChart(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
+
+    chartView->setMinimumSize(800, 800);
+
 
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(chartView);
@@ -17,22 +22,42 @@ GraphWidget::GraphWidget(QWidget *parent)
 
 void GraphWidget::setData(const QMap<QDateTime, qreal> &data, const QString &title)
 {
+
     series->clear();
+
+
+    qDebug() << "Setting data for:" << title;
+    for (auto it = data.begin(); it != data.end(); ++it) {
+        qDebug() << "Date:" << it.key().toString("yyyy-MM-dd HH:mm:ss") << "Value:" << it.value();
+    }
+
 
     for (auto it = data.begin(); it != data.end(); ++it) {
         series->append(it.key().toMSecsSinceEpoch(), it.value());
     }
 
+
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
     axisX->setTitleText("Date");
+    if (!data.isEmpty()) {
+        axisX->setRange(data.firstKey(), data.lastKey());
+    }
     chart->addAxis(axisX, Qt::AlignBottom);
     series->attachAxis(axisX);
 
+
     QValueAxis *axisY = new QValueAxis;
     axisY->setTitleText(title);
+    axisY->setRange(0, 100);
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);
 
+
     chart->setTitle(title);
+
+
+    qDebug() << "X-Axis Range:" << axisX->min().toString("yyyy-MM-dd HH:mm:ss") << "to" << axisX->max().toString("yyyy-MM-dd HH:mm:ss");
+    qDebug() << "Y-Axis Range:" << axisY->min() << "to" << axisY->max();
+    qDebug() << "Series Count:" << series->count();
 }
