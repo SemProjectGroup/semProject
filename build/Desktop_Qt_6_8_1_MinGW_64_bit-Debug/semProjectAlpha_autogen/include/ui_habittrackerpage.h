@@ -18,6 +18,7 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTimeEdit>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -46,6 +47,8 @@ public:
     QPushButton *submitDataButton;
     QPushButton *resetAllButton;
     QWidget *tab_2;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
 
     void setupUi(QWidget *HabitTrackerPage)
     {
@@ -54,7 +57,7 @@ public:
         HabitTrackerPage->resize(1600, 1000);
         label_5 = new QLabel(HabitTrackerPage);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(270, 130, 988, 133));
+        label_5->setGeometry(QRect(270, 90, 988, 133));
         QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Maximum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -73,7 +76,7 @@ public:
         label_5->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tabWidget = new QTabWidget(HabitTrackerPage);
         tabWidget->setObjectName("tabWidget");
-        tabWidget->setGeometry(QRect(210, 250, 1071, 661));
+        tabWidget->setGeometry(QRect(210, 250, 1181, 731));
         tabWidget->setStyleSheet(QString::fromUtf8("font-family: \"Open Sans\", sans-serif;\n"
 "  font-size: 20px;\n"
 "  letter-spacing: 2px;\n"
@@ -96,7 +99,7 @@ public:
         tab->setObjectName("tab");
         formLayoutWidget = new QWidget(tab);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(-10, 0, 1051, 421));
+        formLayoutWidget->setGeometry(QRect(-10, 0, 1171, 481));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -402,11 +405,17 @@ public:
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
+        verticalLayoutWidget = new QWidget(tab_2);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(0, 0, 1151, 681));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
         tabWidget->addTab(tab_2, QString());
 
         retranslateUi(HabitTrackerPage);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(HabitTrackerPage);
@@ -418,6 +427,9 @@ public:
         label_5->setText(QCoreApplication::translate("HabitTrackerPage", "<h1>Habit Tracker</h1>\n"
 "<hr style=\"background-color:'cyan'\" width=80%/>\n"
 "", nullptr));
+#if QT_CONFIG(tooltip)
+        tabWidget->setToolTip(QString());
+#endif // QT_CONFIG(tooltip)
         label->setText(QCoreApplication::translate("HabitTrackerPage", "Woke up at    ", nullptr));
         label_2->setText(QCoreApplication::translate("HabitTrackerPage", "Went to sleep at                ", nullptr));
         label_3->setText(QCoreApplication::translate("HabitTrackerPage", "Pages Read                          ", nullptr));

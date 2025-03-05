@@ -58,6 +58,9 @@
      <height>731</height>
     </rect>
    </property>
+   <property name="toolTip">
+    <string/>
+   </property>
    <property name="styleSheet">
     <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
   font-size: 20px;
@@ -79,7 +82,7 @@ background-color:rgba(0,255,255,0.01);
 height: 45;</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -470,6 +473,17 @@ background-color:rgba(255,0,0,0.3);
     <attribute name="title">
      <string>Tab 2</string>
     </attribute>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1151</width>
+       <height>681</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout"/>
+    </widget>
    </widget>
   </widget>
  </widget>

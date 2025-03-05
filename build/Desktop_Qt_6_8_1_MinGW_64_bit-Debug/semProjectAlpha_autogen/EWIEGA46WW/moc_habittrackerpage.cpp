@@ -1,12 +1,12 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'habittrackerpage.h'
+** Meta object code from reading C++ file 'HabitTrackerPage.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../habittrackerpage.h"
+#include "../../../../HabitTrackerPage.h"
 #include <QtNetwork/QSslError>
 #include <QtCore/qmetatype.h>
 
@@ -17,7 +17,7 @@
 
 #include <QtCore/qxptype_traits.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'habittrackerpage.h' doesn't include <QObject>."
+#error "The header file 'HabitTrackerPage.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.8.1. It"
 #error "cannot be used with the include files from this version of Qt."
