@@ -13,14 +13,14 @@ LandingPage::LandingPage(QWidget *parent)
 
     timer1 = new QTimer(this);
     connect(timer1, &QTimer::timeout,this,&LandingPage::timerFunction);
-    timer1->start(2000);
+    timer1->start(5000);
 
 
 }
 
 void LandingPage::timerFunction(){
     qDebug()<<"Reacher to the second page";
-    navigateToNavigationPage();
+    navigateToLoginPage();
     timer1->disconnect();
 }
 

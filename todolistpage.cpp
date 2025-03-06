@@ -1,12 +1,16 @@
 #include "ToDoListPage.h"
 #include "ui_todolistpage.h"
 
+#include "userdata.h"
+
 #include <QDebug.h>
 
 ToDoListPage::ToDoListPage(QWidget *parent)
     : QWidget(parent), ui(new Ui::ToDoListPage),
     firebaseManager(new FirebaseManager(this))
 {
+QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
     ui->setupUi(this);
     this->setFixedHeight(1000);
     this->setFixedWidth(1600);
@@ -28,7 +32,7 @@ ToDoListPage::ToDoListPage(QWidget *parent)
         ui->activeTasks->addItem("Task Number "+QString::number(var));
         ui->activeTasks->addItem("             ");
     }
-    firebaseManager->getData("tasks");
+    firebaseManager->getData("tasks/"+name+"/");
     ui->activeTasks->addItem("             ");
     ui->upNestTasks->addItem("             ");
     ui->completedTasks->addItem("             ");
@@ -46,6 +50,10 @@ void ToDoListPage::on_markCompleteButton_clicked()
     QListWidgetItem *temp= ui->upNestTasks->currentItem();
     QListWidgetItem *temp2= ui->activeTasks->currentItem();
 
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
+
     qDebug()<<temp;
     qDebug()<<temp2;
     if(temp == 0x0){
@@ -61,7 +69,7 @@ void ToDoListPage::on_markCompleteButton_clicked()
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "completed";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
         }
 
@@ -76,7 +84,7 @@ void ToDoListPage::on_markCompleteButton_clicked()
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "completed";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
         }
     }
@@ -85,10 +93,17 @@ void ToDoListPage::on_markCompleteButton_clicked()
 
 
 
+
 }
 
 void ToDoListPage::on_markActiveButton_clicked()
+
+
 {
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
+
     QListWidgetItem *temp= ui->completedTasks->currentItem();
     QListWidgetItem *temp2= ui->activeTasks->currentItem();
 
@@ -104,7 +119,7 @@ void ToDoListPage::on_markActiveButton_clicked()
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "active";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
         }
     }
@@ -118,7 +133,7 @@ void ToDoListPage::on_markActiveButton_clicked()
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "active";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
         }
     }
@@ -126,10 +141,16 @@ void ToDoListPage::on_markActiveButton_clicked()
     ui->activeTasks->addItem("             ");
 
 
+
 }
 
 void ToDoListPage::on_markUpNextButton_clicked()
 {
+
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
+
     QListWidgetItem *temp= ui->upNestTasks->currentItem();
     QListWidgetItem *temp2= ui->completedTasks->currentItem();
 
@@ -145,7 +166,7 @@ void ToDoListPage::on_markUpNextButton_clicked()
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "upNest";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
         }
     }
@@ -159,18 +180,22 @@ void ToDoListPage::on_markUpNextButton_clicked()
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "upNest";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
             ToDoListPage::onTaskAdded(1);
         }
     }
 
     ui->upNestTasks->addItem("             ");
+    firebaseManager->getData("tasks/"+name+"/");
 
 
 }
 
 void ToDoListPage::on_deleteItemButton_clicked()
 {
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
 
     deleteItemFromCompletedSection();
     deleteItemFromActiveSection();
@@ -183,6 +208,10 @@ void ToDoListPage::on_deleteItemButton_clicked()
 
 void ToDoListPage::on_addItemButton_clicked()
 {
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
+
     if(ui->comboBox->currentIndex()==0){
         ui->completedTasks->addItem(ui->newToDoLineEdit->text());
         ui->completedTasks->addItem("             ");
@@ -192,8 +221,15 @@ void ToDoListPage::on_addItemButton_clicked()
             QJsonObject taskJSONObject;
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "completed";
+            qDebug()<< ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
+            qDebug()<< ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            qDebug()<< name;
+
+            qDebug()<< ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
+            qDebug()<< ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
+
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
         }
         ToDoListPage::onTaskAdded(1);
     }
@@ -208,7 +244,7 @@ void ToDoListPage::on_addItemButton_clicked()
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "active";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
         }
         ToDoListPage::onTaskAdded(1);
     }
@@ -223,16 +259,21 @@ void ToDoListPage::on_addItemButton_clicked()
             taskJSONObject["name"] = taskName;
             taskJSONObject["tag"] = "upNest";
 
-            firebaseManager->postData("tasks", taskJSONObject);
+            firebaseManager->postData("tasks/"+name+"/", taskJSONObject);
         }
         ToDoListPage::onTaskAdded(1);
     }
+
 
 
 }
 
 void ToDoListPage::onDataReceived(const QJsonObject &data)
 {
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
+
     ui->activeTasks->clear();
     ui->completedTasks->clear();
     ui->upNestTasks->clear();
@@ -288,24 +329,40 @@ void ToDoListPage::oncheckReplyFinished(bool success)
 
 void ToDoListPage::onTaskAdded(bool success)
 {
+    QString email = UserData::instance().getEmail();
+
+    QString name= email.mid(0,email.indexOf("@"));
+
     if(success){
         qDebug()<<"Task added successfully";
     }else {
         qDebug() << "Failed to post item.";
     }
+    firebaseManager->getData("tasks/"+name+"/");
+
 }
 
 void ToDoListPage::onDeleteFinished(bool success)
 {
+    QString email = UserData::instance().getEmail();
+
+    QString name= email.mid(0,email.indexOf("@"));
+
     if (success) {
         qDebug()<<"Task deleted successfully";
     } else {
         qDebug() << "Failed to delete item.";
     }
+    firebaseManager->getData("tasks/"+name+"/");
+
 }
 
 
 void ToDoListPage::deleteItemFromCompletedSection(){
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
+
     QListWidgetItem *temp= ui->completedTasks->currentItem();
     QModelIndex tempIndex = ui->completedTasks->indexFromItem(temp);
 
@@ -322,7 +379,7 @@ void ToDoListPage::deleteItemFromCompletedSection(){
         qDebug()<<"tasks/"+key;
         qDebug()<<"checkingifdataexists";
         firebaseManager->checkIfDataExists("tasks",key);
-        firebaseManager->deleteData("tasks/"+key);
+        firebaseManager->deleteData("tasks/"+name+"//"+key);
         delete temp;
         ToDoListPage::onDeleteFinished(1);
 
@@ -332,6 +389,10 @@ void ToDoListPage::deleteItemFromCompletedSection(){
 }
 
 void ToDoListPage::deleteItemFromActiveSection(){
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
+
     QListWidgetItem *temp= ui->activeTasks->currentItem();
     QModelIndex tempIndex = ui->upNestTasks->indexFromItem(temp);
 
@@ -344,7 +405,7 @@ void ToDoListPage::deleteItemFromActiveSection(){
     ui->upNestTasks->setCurrentIndex(tempIndex);
     if(temp){
         QString key = temp->data(Qt::UserRole).toString();
-        firebaseManager->deleteData("tasks/"+key);
+        firebaseManager->deleteData("tasks/"+name+"//"+key);
         delete temp;
         ToDoListPage::onDeleteFinished(1);
     }
@@ -355,6 +416,10 @@ void ToDoListPage::deleteItemFromActiveSection(){
 };
 
 void ToDoListPage::deleteItemFromUpNestSection(){
+    QString email = UserData::instance().getEmail();
+    QString name= email.mid(0,email.indexOf("@"));
+
+
     QListWidgetItem *temp= ui->upNestTasks->currentItem();
     QModelIndex tempIndex = ui->upNestTasks->indexFromItem(temp);
 
@@ -371,7 +436,7 @@ void ToDoListPage::deleteItemFromUpNestSection(){
         qDebug()<<"tasks/"+key;
         qDebug()<<"checkingifdataexists";
         firebaseManager->checkIfDataExists("tasks",key);
-        firebaseManager->deleteData("tasks/"+key);
+        firebaseManager->deleteData("tasks/"+name+"//"+key);
         delete temp;
         ToDoListPage::onDeleteFinished(1);
 

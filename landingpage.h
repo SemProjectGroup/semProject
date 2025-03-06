@@ -21,6 +21,7 @@ public:
 
 signals:
     void navigateToNavigationPage();
+    void navigateToLoginPage();
 
 private:
     Ui::LandingPage *ui;

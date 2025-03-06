@@ -705,6 +705,8 @@ semProjectAlpha_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
 	H:/semProjectAlpha/CMakeLists.txt \
+	H:/semProjectAlpha/FireBaseAuthManager.cpp \
+	H:/semProjectAlpha/FirebaseAuthManager.h \
 	H:/semProjectAlpha/FirebaseManager.cpp \
 	H:/semProjectAlpha/FirebaseManager.h \
 	H:/semProjectAlpha/GraphWidget.cpp \
@@ -718,6 +720,8 @@ semProjectAlpha_autogen/timestamp: \
 	H:/semProjectAlpha/habittrackerpage.cpp \
 	H:/semProjectAlpha/landingpage.cpp \
 	H:/semProjectAlpha/landingpage.h \
+	H:/semProjectAlpha/loginpage.cpp \
+	H:/semProjectAlpha/loginpage.h \
 	H:/semProjectAlpha/main.cpp \
 	H:/semProjectAlpha/mainwindow.cpp \
 	H:/semProjectAlpha/mainwindow.h \
@@ -727,8 +731,10 @@ semProjectAlpha_autogen/timestamp: \
 	H:/semProjectAlpha/pomodoropage.h \
 	H:/semProjectAlpha/todolistpage.cpp \
 	H:/semProjectAlpha/todolistpage.h \
+	H:/semProjectAlpha/userData.h \
 	H:/semProjectAlpha/habittrackerpage.ui \
 	H:/semProjectAlpha/landingpage.ui \
+	H:/semProjectAlpha/loginpage.ui \
 	H:/semProjectAlpha/mainwindow.ui \
 	H:/semProjectAlpha/navigationpage.ui \
 	H:/semProjectAlpha/pomodoropage.ui \

@@ -13,6 +13,7 @@ class NavigationPage;
 class ToDoListPage;
 class HabitTrackerPage;
 class PomodoroPage;
+class LoginPage;
 
 class MainWindow : public QMainWindow
 {
@@ -28,6 +29,7 @@ private slots:
     void switchToToDoListPage();
     void switchToHabitTrackerPage();
     void switchToPomodoroPage();
+    void switchToLoginPage();
 
 private:
     Ui::MainWindow *ui;
@@ -40,6 +42,7 @@ private:
     ToDoListPage *toDoListPage;
     HabitTrackerPage *habitTrackerPage;
     PomodoroPage *pomodoroPage;
+    LoginPage *loginPage;
 };
 
 #endif // MAINWINDOW_H

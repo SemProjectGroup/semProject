@@ -405,4 +405,5 @@ H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/semProjectAlpha_aut
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+  H:/semProjectAlpha/FirebaseAuthManager.h \
   H:/semProjectAlpha/FirebaseManager.h

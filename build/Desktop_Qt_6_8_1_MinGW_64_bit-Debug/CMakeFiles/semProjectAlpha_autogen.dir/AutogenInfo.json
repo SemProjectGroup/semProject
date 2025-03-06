@@ -358,6 +358,12 @@
 	"HEADERS" : 
 	[
 		[
+			"H:/semProjectAlpha/FirebaseAuthManager.h",
+			"MU",
+			"EWIEGA46WW/moc_FirebaseAuthManager.cpp",
+			null
+		],
+		[
 			"H:/semProjectAlpha/FirebaseManager.h",
 			"MU",
 			"EWIEGA46WW/moc_FirebaseManager.cpp",
@@ -382,6 +388,12 @@
 			null
 		],
 		[
+			"H:/semProjectAlpha/loginpage.h",
+			"MU",
+			"EWIEGA46WW/moc_loginpage.cpp",
+			null
+		],
+		[
 			"H:/semProjectAlpha/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -403,6 +415,12 @@
 			"H:/semProjectAlpha/todolistpage.h",
 			"MU",
 			"EWIEGA46WW/moc_todolistpage.cpp",
+			null
+		],
+		[
+			"H:/semProjectAlpha/userData.h",
+			"MU",
+			"EWIEGA46WW/moc_userData.cpp",
 			null
 		]
 	],
@@ -485,10 +503,12 @@
 	"SETTINGS_FILE" : "H:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/semProjectAlpha_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "H:/semProjectAlpha/FireBaseAuthManager.cpp", "MU", null ],
 		[ "H:/semProjectAlpha/FirebaseManager.cpp", "MU", null ],
 		[ "H:/semProjectAlpha/GraphWidget.cpp", "MU", null ],
 		[ "H:/semProjectAlpha/habittrackerpage.cpp", "MU", null ],
 		[ "H:/semProjectAlpha/landingpage.cpp", "MU", null ],
+		[ "H:/semProjectAlpha/loginpage.cpp", "MU", null ],
 		[ "H:/semProjectAlpha/main.cpp", "MU", null ],
 		[ "H:/semProjectAlpha/mainwindow.cpp", "MU", null ],
 		[ "H:/semProjectAlpha/navigationpage.cpp", "MU", null ],

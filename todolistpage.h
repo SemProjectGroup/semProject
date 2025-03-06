@@ -2,6 +2,7 @@
 #define TODOLISTPAGE_H
 
 #include "FirebaseManager.h"
+#include "FirebaseAuthManager.h"
 
 #include <QWidget>
 
@@ -45,6 +46,7 @@ private slots:
 private:
     Ui::ToDoListPage *ui;
     FirebaseManager *firebaseManager;
+    FirebaseAuthManager *firebaseAuthManager;
 
 };
 

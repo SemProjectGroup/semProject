@@ -129,6 +129,22 @@ build CMakeFiles/semProjectAlpha.dir/GraphWidget.cpp.obj: CXX_COMPILER__semProje
   OBJECT_DIR = CMakeFiles\semProjectAlpha.dir
   OBJECT_FILE_DIR = CMakeFiles\semProjectAlpha.dir
 
+build CMakeFiles/semProjectAlpha.dir/FireBaseAuthManager.cpp.obj: CXX_COMPILER__semProjectAlpha_unscanned_Debug H$:/semProjectAlpha/FireBaseAuthManager.cpp || cmake_object_order_depends_target_semProjectAlpha
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CHARTS_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\semProjectAlpha.dir\FireBaseAuthManager.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IH:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/semProjectAlpha_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include/QtNetwork -isystem C:/Qt/6.8.1/mingw_64/include/QtCharts -isystem C:/Qt/6.8.1/mingw_64/include/QtOpenGL -isystem C:/Qt/6.8.1/mingw_64/include/QtOpenGLWidgets
+  OBJECT_DIR = CMakeFiles\semProjectAlpha.dir
+  OBJECT_FILE_DIR = CMakeFiles\semProjectAlpha.dir
+
+build CMakeFiles/semProjectAlpha.dir/loginpage.cpp.obj: CXX_COMPILER__semProjectAlpha_unscanned_Debug H$:/semProjectAlpha/loginpage.cpp || cmake_object_order_depends_target_semProjectAlpha
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CHARTS_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NETWORK_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\semProjectAlpha.dir\loginpage.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IH:/semProjectAlpha/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/semProjectAlpha_autogen/include -isystem C:/Qt/6.8.1/mingw_64/include/QtCore -isystem C:/Qt/6.8.1/mingw_64/include -isystem C:/Qt/6.8.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.1/mingw_64/include/QtGui -isystem C:/Qt/6.8.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.1/mingw_64/include/QtNetwork -isystem C:/Qt/6.8.1/mingw_64/include/QtCharts -isystem C:/Qt/6.8.1/mingw_64/include/QtOpenGL -isystem C:/Qt/6.8.1/mingw_64/include/QtOpenGLWidgets
+  OBJECT_DIR = CMakeFiles\semProjectAlpha.dir
+  OBJECT_FILE_DIR = CMakeFiles\semProjectAlpha.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target semProjectAlpha
@@ -137,7 +153,7 @@ build CMakeFiles/semProjectAlpha.dir/GraphWidget.cpp.obj: CXX_COMPILER__semProje
 #############################################
 # Link the executable semProjectAlpha.exe
 
-build semProjectAlpha.exe: CXX_EXECUTABLE_LINKER__semProjectAlpha_Debug CMakeFiles/semProjectAlpha.dir/semProjectAlpha_autogen/mocs_compilation.cpp.obj CMakeFiles/semProjectAlpha.dir/main.cpp.obj CMakeFiles/semProjectAlpha.dir/mainwindow.cpp.obj CMakeFiles/semProjectAlpha.dir/landingpage.cpp.obj CMakeFiles/semProjectAlpha.dir/habittrackerpage.cpp.obj CMakeFiles/semProjectAlpha.dir/pomodoropage.cpp.obj CMakeFiles/semProjectAlpha.dir/navigationpage.cpp.obj CMakeFiles/semProjectAlpha.dir/todolistpage.cpp.obj CMakeFiles/semProjectAlpha.dir/FirebaseManager.cpp.obj CMakeFiles/semProjectAlpha.dir/GraphWidget.cpp.obj | C$:/Qt/6.8.1/mingw_64/lib/libQt6Network.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Charts.a C$:/Qt/6.8.1/mingw_64/lib/libQt6OpenGLWidgets.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.1/mingw_64/lib/libQt6OpenGL.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.1/mingw_64/lib/libQt6EntryPoint.a || semProjectAlpha_autogen semProjectAlpha_autogen_timestamp_deps
+build semProjectAlpha.exe: CXX_EXECUTABLE_LINKER__semProjectAlpha_Debug CMakeFiles/semProjectAlpha.dir/semProjectAlpha_autogen/mocs_compilation.cpp.obj CMakeFiles/semProjectAlpha.dir/main.cpp.obj CMakeFiles/semProjectAlpha.dir/mainwindow.cpp.obj CMakeFiles/semProjectAlpha.dir/landingpage.cpp.obj CMakeFiles/semProjectAlpha.dir/habittrackerpage.cpp.obj CMakeFiles/semProjectAlpha.dir/pomodoropage.cpp.obj CMakeFiles/semProjectAlpha.dir/navigationpage.cpp.obj CMakeFiles/semProjectAlpha.dir/todolistpage.cpp.obj CMakeFiles/semProjectAlpha.dir/FirebaseManager.cpp.obj CMakeFiles/semProjectAlpha.dir/GraphWidget.cpp.obj CMakeFiles/semProjectAlpha.dir/FireBaseAuthManager.cpp.obj CMakeFiles/semProjectAlpha.dir/loginpage.cpp.obj | C$:/Qt/6.8.1/mingw_64/lib/libQt6Network.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Charts.a C$:/Qt/6.8.1/mingw_64/lib/libQt6OpenGLWidgets.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.1/mingw_64/lib/libQt6OpenGL.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.8.1/mingw_64/lib/libQt6EntryPoint.a || semProjectAlpha_autogen semProjectAlpha_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.8.1/mingw_64/lib/libQt6Network.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Charts.a  -lws2_32  C:/Qt/6.8.1/mingw_64/lib/libQt6OpenGLWidgets.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.1/mingw_64/lib/libQt6OpenGL.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.8.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -luser32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -224,7 +240,7 @@ build semProjectAlpha_autogen_timestamp_deps: phony
 #############################################
 # Utility command for semProjectAlpha_autogen
 
-build semProjectAlpha_autogen: phony CMakeFiles/semProjectAlpha_autogen semProjectAlpha_autogen/include/ui_mainwindow.h semProjectAlpha_autogen/include/ui_landingpage.h semProjectAlpha_autogen/include/ui_habittrackerpage.h semProjectAlpha_autogen/include/ui_pomodoropage.h semProjectAlpha_autogen/include/ui_navigationpage.h semProjectAlpha_autogen/include/ui_todolistpage.h semProjectAlpha_autogen/timestamp semProjectAlpha_autogen/mocs_compilation.cpp semProjectAlpha_autogen_timestamp_deps
+build semProjectAlpha_autogen: phony CMakeFiles/semProjectAlpha_autogen semProjectAlpha_autogen/include/ui_mainwindow.h semProjectAlpha_autogen/include/ui_landingpage.h semProjectAlpha_autogen/include/ui_habittrackerpage.h semProjectAlpha_autogen/include/ui_pomodoropage.h semProjectAlpha_autogen/include/ui_navigationpage.h semProjectAlpha_autogen/include/ui_todolistpage.h semProjectAlpha_autogen/include/ui_loginpage.h semProjectAlpha_autogen/timestamp semProjectAlpha_autogen/mocs_compilation.cpp semProjectAlpha_autogen_timestamp_deps
 
 
 #############################################
@@ -241,7 +257,7 @@ build semProjectAlpha_autogen/timestamp semProjectAlpha_autogen/mocs_compilation
 #############################################
 # Phony custom command for CMakeFiles\semProjectAlpha_autogen
 
-build CMakeFiles/semProjectAlpha_autogen semProjectAlpha_autogen/include/ui_mainwindow.h semProjectAlpha_autogen/include/ui_landingpage.h semProjectAlpha_autogen/include/ui_habittrackerpage.h semProjectAlpha_autogen/include/ui_pomodoropage.h semProjectAlpha_autogen/include/ui_navigationpage.h semProjectAlpha_autogen/include/ui_todolistpage.h | ${cmake_ninja_workdir}CMakeFiles/semProjectAlpha_autogen ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_landingpage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_habittrackerpage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_pomodoropage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_navigationpage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_todolistpage.h: phony semProjectAlpha_autogen/timestamp || semProjectAlpha_autogen_timestamp_deps
+build CMakeFiles/semProjectAlpha_autogen semProjectAlpha_autogen/include/ui_mainwindow.h semProjectAlpha_autogen/include/ui_landingpage.h semProjectAlpha_autogen/include/ui_habittrackerpage.h semProjectAlpha_autogen/include/ui_pomodoropage.h semProjectAlpha_autogen/include/ui_navigationpage.h semProjectAlpha_autogen/include/ui_todolistpage.h semProjectAlpha_autogen/include/ui_loginpage.h | ${cmake_ninja_workdir}CMakeFiles/semProjectAlpha_autogen ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_landingpage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_habittrackerpage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_pomodoropage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_navigationpage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_todolistpage.h ${cmake_ninja_workdir}semProjectAlpha_autogen/include/ui_loginpage.h: phony semProjectAlpha_autogen/timestamp || semProjectAlpha_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
