@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1600</width>
+    <height>1000</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,40 +16,100 @@
   <widget class="QPushButton" name="toDoListButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>130</y>
-     <width>83</width>
-     <height>29</height>
+     <x>430</x>
+     <y>220</y>
+     <width>251</width>
+     <height>251</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+width:800;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:45;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  outline: none !important;
+</string>
+   </property>
    <property name="text">
-    <string>toDoListButton</string>
+    <string>To-Do List</string>
    </property>
   </widget>
   <widget class="QPushButton" name="habitTrackerButton">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>140</y>
-     <width>83</width>
-     <height>29</height>
+     <x>860</x>
+     <y>220</y>
+     <width>251</width>
+     <height>251</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:45;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+   </property>
    <property name="text">
-    <string>habitTrackerButton</string>
+    <string>Habit Tracker</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>220</y>
-     <width>83</width>
-     <height>29</height>
+     <x>650</x>
+     <y>550</y>
+     <width>251</width>
+     <height>251</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:45;
+border-color: white;
+background-color:rgba(0,255,255,0.3);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+   </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>PomoDoro Timer</string>
    </property>
   </widget>
  </widget>

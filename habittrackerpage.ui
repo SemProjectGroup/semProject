@@ -494,6 +494,23 @@ background-color:rgba(255,0,0,0.3);
         <string>Reset all</string>
        </property>
       </widget>
+      <widget class="QPushButton" name="goBackButton">
+       <property name="geometry">
+        <rect>
+         <x>1370</x>
+         <y>20</y>
+         <width>171</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:none;
+color:white;</string>
+       </property>
+       <property name="text">
+        <string>Go Back</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">

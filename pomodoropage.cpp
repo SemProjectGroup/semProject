@@ -84,3 +84,9 @@ void PomodoroPage::on_stopTimerButton_clicked()
 {
     timer->stop();
 }
+
+void PomodoroPage::on_goBackButton_clicked()
+{
+    navigateToNavigationPage();
+}
+

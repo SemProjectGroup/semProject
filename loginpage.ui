@@ -17,10 +17,29 @@
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>640</y>
-     <width>83</width>
-     <height>29</height>
+     <y>740</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: rgb(120,120,120);
+background-color:rgb(0,185,185);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
    </property>
    <property name="text">
     <string>login</string>
@@ -29,11 +48,30 @@
   <widget class="QPushButton" name="registerButton">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>630</y>
-     <width>83</width>
-     <height>29</height>
+     <x>360</x>
+     <y>740</y>
+     <width>141</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: rgb(120,120,120);
+background-color:rgb(0,185,185);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
    </property>
    <property name="text">
     <string>register</string>
@@ -42,11 +80,30 @@
   <widget class="QPushButton" name="clearAllButton">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>630</y>
-     <width>83</width>
-     <height>29</height>
+     <x>640</x>
+     <y>740</y>
+     <width>131</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: rgb(120,120,120);
+background-color:rgba(185,0,0,0.7);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
    </property>
    <property name="text">
     <string>clear all</string>
@@ -55,62 +112,287 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>320</y>
+     <x>360</x>
+     <y>530</y>
      <width>101</width>
      <height>51</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: rgb(100,100,100);
+ text-align: center;
+  padding-bottom: 5px;</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>Email</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>400</y>
+     <x>360</x>
+     <y>610</y>
      <width>111</width>
      <height>71</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: rgb(100,100,100);
+ text-align: center;
+  padding-bottom: 5px;</string>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>Password</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="emailInput">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>330</y>
-     <width>231</width>
+     <x>490</x>
+     <y>530</y>
+     <width>251</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: rgb(120,120,120);
+background-color:rgb(0,185,185);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="passwordInput">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>410</y>
-     <width>231</width>
+     <x>490</x>
+     <y>620</y>
+     <width>251</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Open Sans&quot;, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  border: 3px solid;
+border-radius:15;
+border-color: rgb(120,120,120);
+background-color:rgb(0,185,185);
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::EchoMode::Password</enum>
    </property>
   </widget>
   <widget class="QLabel" name="errorLabel">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>750</y>
+     <x>380</x>
+     <y>820</y>
      <width>361</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(200,200,200)</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>340</y>
+     <width>481</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  color: white;
+ text-align: center;
+  padding-bottom: 5px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(0, 135, 135, 255));
+border-top-right-radius: 25;
+border-bottom-right-radius: 25;</string>
+   </property>
+   <property name="text">
+    <string>&lt;div&gt;
+&lt;h1&gt;Welcome user!&lt;/h1&gt;
+&lt;br&gt;
+Enter your personal details and
+&lt;br&gt; start your productivity journey  &lt;br&gt; with us
+
+
+&lt;/div&gt;
+</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>340</y>
+     <width>461</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  color: white;
+ text-align: center;
+  padding-bottom: 5px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(150, 150, 150, 255), stop:1 rgba(250, 250, 250, 255));
+border-top-left-radius: 25;
+border-bottom-left-radius: 25;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>400</y>
+     <width>301</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: rgb(100,100,100);
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+   </property>
+   <property name="text">
+    <string>&lt;h1&gt;Login/Signup &lt;/h1&gt;
+&lt;hr style=&quot;background-color:'cyan'&quot; width=80%/&gt;
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>351</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">opacity:0.1</string>
+   </property>
+   <property name="text">
+    <string>&lt;img src=&quot;E:\School\SemProject\logo3.png&quot; width=300 style=&quot;opacity:0.1&quot;/&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>-90</y>
+     <width>1291</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: &quot;Raleway&quot;, sans-serif;
+  font-weight: 300;
+  font-size: 34px;
+  color: white;
+ text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;</string>
+   </property>
+   <property name="text">
+    <string>&lt;div&gt;
+&lt;h1&gt;Let's Be Productive&lt;/h1&gt;
+&lt;hr style=&quot;background-color:'cyan'&quot; width=80%/&gt;
+&lt;p style=&quot;  text-transform: none; font-size:28px&quot;&gt;The productivity app for all students&lt;/p&gt;
+&lt;/div&gt;
+</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::TextFormat::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>label_4</zorder>
+  <zorder>loginButton</zorder>
+  <zorder>registerButton</zorder>
+  <zorder>clearAllButton</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>emailInput</zorder>
+  <zorder>passwordInput</zorder>
+  <zorder>errorLabel</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
  </widget>
  <resources/>
  <connections/>

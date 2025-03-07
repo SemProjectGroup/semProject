@@ -51,6 +51,7 @@ public:
     QSpinBox *expensesSpinBox;
     QPushButton *submitDataButton;
     QPushButton *resetAllButton;
+    QPushButton *goBackButton;
     QWidget *tab_2;
     QHBoxLayout *horizontalLayout;
     QScrollArea *scrollArea;
@@ -424,6 +425,11 @@ public:
 "  user-select: none;\n"
 "  -webkit-user-select: none;\n"
 "  touch-action: manipulation;"));
+        goBackButton = new QPushButton(tab);
+        goBackButton->setObjectName("goBackButton");
+        goBackButton->setGeometry(QRect(1370, 20, 171, 61));
+        goBackButton->setStyleSheet(QString::fromUtf8("background-color:none;\n"
+"color:white;"));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
@@ -471,6 +477,7 @@ public:
         label_7->setText(QCoreApplication::translate("HabitTrackerPage", "Expenses", nullptr));
         submitDataButton->setText(QCoreApplication::translate("HabitTrackerPage", "Submit Data", nullptr));
         resetAllButton->setText(QCoreApplication::translate("HabitTrackerPage", "Reset all", nullptr));
+        goBackButton->setText(QCoreApplication::translate("HabitTrackerPage", "Go Back", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("HabitTrackerPage", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("HabitTrackerPage", "Tab 2", nullptr));
     } // retranslateUi

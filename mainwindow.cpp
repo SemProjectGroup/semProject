@@ -40,7 +40,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(navigationPage, &NavigationPage::navigateToToDoList, this, &MainWindow::switchToToDoListPage);
     connect(navigationPage, &NavigationPage::navigateToHabitTracker, this, &MainWindow::switchToHabitTrackerPage);
     connect(navigationPage, &NavigationPage::navigateToPomodoro, this, &MainWindow::switchToPomodoroPage);
-     connect(landingPage, &LandingPage::navigateToLoginPage, this, &MainWindow::switchToLoginPage);
+    connect(landingPage, &LandingPage::navigateToLoginPage, this, &MainWindow::switchToLoginPage);
+
+    connect(toDoListPage, &ToDoListPage::navigateToNavigationPage, this, &MainWindow::switchToNavigationPage);
+    connect(habitTrackerPage, &HabitTrackerPage::navigateToNavigationPage, this, &MainWindow::switchToNavigationPage);
+    connect(pomodoroPage, &PomodoroPage::navigateToNavigationPage, this, &MainWindow::switchToNavigationPage);
 }
 
 MainWindow::~MainWindow()

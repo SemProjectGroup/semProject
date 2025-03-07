@@ -86,6 +86,7 @@ public:
     QListWidget *upNestTasks;
     QGroupBox *groupBox_3;
     QListWidget *completedTasks;
+    QPushButton *goBackButton;
 
     void setupUi(QWidget *ToDoListPage)
     {
@@ -701,6 +702,9 @@ public:
         verticalLayout_2->addLayout(gridLayout);
 
         stackedWidget->addWidget(todoListPage);
+        goBackButton = new QPushButton(ToDoListPage);
+        goBackButton->setObjectName("goBackButton");
+        goBackButton->setGeometry(QRect(1410, 130, 83, 29));
 
         retranslateUi(ToDoListPage);
 
@@ -760,6 +764,7 @@ public:
         groupBox->setTitle(QCoreApplication::translate("ToDoListPage", "Active", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("ToDoListPage", "Up Next", nullptr));
         groupBox_3->setTitle(QCoreApplication::translate("ToDoListPage", "Completed", nullptr));
+        goBackButton->setText(QCoreApplication::translate("ToDoListPage", "Go Back ", nullptr));
     } // retranslateUi
 
 };

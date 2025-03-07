@@ -217,3 +217,9 @@ void HabitTrackerPage::on_submitDataButton_clicked()
 
 
 
+
+void HabitTrackerPage::on_goBackButton_clicked()
+{
+    navigateToNavigationPage();
+}
+

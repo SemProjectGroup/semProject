@@ -26,6 +26,10 @@ public:
     explicit HabitTrackerPage(QWidget *parent = nullptr);
     ~HabitTrackerPage();
 
+signals:
+
+    void navigateToNavigationPage();
+
 private slots:
     void on_resetAllButton_clicked();
 
@@ -34,6 +38,8 @@ private slots:
     void onDataReceived(const QJsonObject &data);
 
     void on_submitDataButton_clicked();
+
+    void on_goBackButton_clicked();
 
 private:
     Ui::HabitTrackerPage *ui;

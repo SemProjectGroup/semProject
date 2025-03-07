@@ -16,6 +16,10 @@ public:
     explicit PomodoroPage(QWidget *parent = nullptr);
     ~PomodoroPage();
 
+signals:
+
+    void navigateToNavigationPage();
+
 private slots:
     void updateTimer();
 
@@ -24,6 +28,8 @@ private slots:
     void on_resetTimerButton_clicked();
 
     void on_stopTimerButton_clicked();
+
+    void on_goBackButton_clicked();
 
 private:
     Ui::PomodoroPage *ui;

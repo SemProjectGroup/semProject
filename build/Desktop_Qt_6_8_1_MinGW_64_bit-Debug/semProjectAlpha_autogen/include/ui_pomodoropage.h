@@ -86,6 +86,7 @@ public:
     QListWidget *activeTasks;
     QGroupBox *groupBox_3;
     QListWidget *completedTasks;
+    QPushButton *goBackButton;
 
     void setupUi(QWidget *PomodoroPage)
     {
@@ -696,6 +697,9 @@ public:
         verticalLayout_2->addLayout(gridLayout);
 
         stackedWidget->addWidget(todoListPage);
+        goBackButton = new QPushButton(PomodoroPage);
+        goBackButton->setObjectName("goBackButton");
+        goBackButton->setGeometry(QRect(1350, 140, 91, 31));
 
         retranslateUi(PomodoroPage);
 
@@ -755,6 +759,7 @@ public:
         groupBox->setTitle(QCoreApplication::translate("PomodoroPage", "Active", nullptr));
         groupBox_2->setTitle(QCoreApplication::translate("PomodoroPage", "Up Next", nullptr));
         groupBox_3->setTitle(QCoreApplication::translate("PomodoroPage", "Completed", nullptr));
+        goBackButton->setText(QCoreApplication::translate("PomodoroPage", "Go Back", nullptr));
     } // retranslateUi
 
 };

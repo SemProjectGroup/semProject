@@ -23,6 +23,10 @@ public:
 
     ~ToDoListPage();
 
+signals:
+
+    void navigateToNavigationPage();
+
 private slots:
     void on_markCompleteButton_clicked();
 
@@ -42,6 +46,8 @@ private slots:
     void onDeleteFinished(bool success);
 
     void onTaskAdded(bool success);
+
+
 
 private:
     Ui::ToDoListPage *ui;

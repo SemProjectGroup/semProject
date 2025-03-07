@@ -18,6 +18,7 @@ QString email = UserData::instance().getEmail();
     connect(firebaseManager, &FirebaseManager::dataReceived, this, &ToDoListPage::onDataReceived);
 
     connect(firebaseManager, &FirebaseManager::checkIfDataExistsFinished, this, &ToDoListPage::oncheckReplyFinished);
+    connect(ui->goBackButton, &QPushButton::clicked, this, &ToDoListPage::navigateToNavigationPage);
 
     //random dummy data for now
     ui->activeTasks->addItem("             ");
@@ -445,3 +446,5 @@ void ToDoListPage::deleteItemFromUpNestSection(){
     ui->upNestTasks->setCurrentIndex(ui->upNestTasks->indexFromItem(temp));
 
 };
+
+

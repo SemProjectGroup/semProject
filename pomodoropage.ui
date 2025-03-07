@@ -1043,6 +1043,19 @@ background-color:rgba(42, 254, 183,0.7);
     </layout>
    </widget>
   </widget>
+  <widget class="QPushButton" name="goBackButton">
+   <property name="geometry">
+    <rect>
+     <x>1350</x>
+     <y>140</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Go Back</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
