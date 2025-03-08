@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="logoLabel">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -29,7 +29,7 @@
     <string notr="true">opacity:0.1</string>
    </property>
    <property name="text">
-    <string>&lt;img src=&quot;E:\School\SemProject\logo3.png&quot; width=300 style=&quot;opacity:0.1&quot;/&gt;</string>
+    <string>&lt;img src=&quot;:public/public/logo3.png&quot; width=300 style=&quot;opacity:0.1&quot;/&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">

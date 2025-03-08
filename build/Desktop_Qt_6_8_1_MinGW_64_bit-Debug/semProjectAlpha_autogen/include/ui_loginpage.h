@@ -52,7 +52,7 @@ public:
 "  cursor: pointer;\n"
 "  border: 3px solid;\n"
 "border-radius:15;\n"
-"border-color: rgb(120,120,120);\n"
+"  border-color: rgb(80,80,80);\n"
 "background-color:rgb(0,185,185);\n"
 "  padding: 0.25em 0.5em;\n"
 "  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;\n"
@@ -72,7 +72,7 @@ public:
 "  cursor: pointer;\n"
 "  border: 3px solid;\n"
 "border-radius:15;\n"
-"border-color: rgb(120,120,120);\n"
+"  border-color: rgb(80,80,80);\n"
 "background-color:rgb(0,185,185);\n"
 "  padding: 0.25em 0.5em;\n"
 "  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;\n"
@@ -92,7 +92,7 @@ public:
 "  cursor: pointer;\n"
 "  border: 3px solid;\n"
 "border-radius:15;\n"
-"border-color: rgb(120,120,120);\n"
+"  border-color: rgb(80,80,80);\n"
 "background-color:rgba(185,0,0,0.7);\n"
 "  padding: 0.25em 0.5em;\n"
 "  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;\n"
@@ -109,7 +109,7 @@ public:
 "  font-family: \"Raleway\", sans-serif;\n"
 "  font-weight: 300;\n"
 "  font-size: 24px;\n"
-"  color: rgb(100,100,100);\n"
+"  color: rgb(80,80,80);\n"
 " text-align: center;\n"
 "  padding-bottom: 5px;"));
         label_2 = new QLabel(LoginPage);
@@ -121,7 +121,7 @@ public:
 "  font-family: \"Raleway\", sans-serif;\n"
 "  font-weight: 300;\n"
 "  font-size: 24px;\n"
-"  color: rgb(100,100,100);\n"
+"  color: rgb(80,80,80);\n"
 " text-align: center;\n"
 "  padding-bottom: 5px;"));
         emailInput = new QLineEdit(LoginPage);
@@ -135,7 +135,7 @@ public:
 "  cursor: pointer;\n"
 "  border: 3px solid;\n"
 "border-radius:15;\n"
-"border-color: rgb(120,120,120);\n"
+"  border-color: rgb(80,80,80);\n"
 "background-color:rgb(0,185,185);\n"
 "  padding: 0.25em 0.5em;\n"
 "  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;\n"
@@ -155,7 +155,7 @@ public:
 "  cursor: pointer;\n"
 "  border: 3px solid;\n"
 "border-radius:15;\n"
-"border-color: rgb(120,120,120);\n"
+"  border-color: rgb(80,80,80);\n"
 "background-color:rgb(0,185,185);\n"
 "  padding: 0.25em 0.5em;\n"
 "  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;\n"
@@ -167,7 +167,8 @@ public:
         errorLabel = new QLabel(LoginPage);
         errorLabel->setObjectName("errorLabel");
         errorLabel->setGeometry(QRect(380, 820, 361, 20));
-        errorLabel->setStyleSheet(QString::fromUtf8("color:rgb(200,200,200)"));
+        errorLabel->setStyleSheet(QString::fromUtf8("  color: rgb(80,80,80);\n"
+""));
         label_3 = new QLabel(LoginPage);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(790, 340, 481, 531));
@@ -180,7 +181,7 @@ public:
 "  color: white;\n"
 " text-align: center;\n"
 "  padding-bottom: 5px;\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(0, 135, 135, 255));\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb( 0, 240, 255), stop:1 rgb(80, 216, 155));\n"
 "border-top-right-radius: 25;\n"
 "border-bottom-right-radius: 25;"));
         label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -202,17 +203,18 @@ public:
         label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
         label_5 = new QLabel(LoginPage);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(410, 400, 301, 61));
+        label_5->setGeometry(QRect(360, 400, 411, 81));
         label_5->setStyleSheet(QString::fromUtf8(" position: relative;\n"
 "  padding: 0;\n"
 "  margin: 0;\n"
 "  font-family: \"Raleway\", sans-serif;\n"
 "  font-weight: 300;\n"
 "  font-size: 18px;\n"
-"  color: rgb(100,100,100);\n"
+"  color: rgb(80,80,80);\n"
 " text-align: center;\n"
 "  text-transform: uppercase;\n"
 "  padding-bottom: 5px;"));
+        label_5->setAlignment(Qt::AlignmentFlag::AlignCenter);
         label_6 = new QLabel(LoginPage);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(20, 70, 351, 261));
@@ -232,6 +234,7 @@ public:
 "  padding-bottom: 5px;"));
         label_7->setTextFormat(Qt::TextFormat::AutoText);
         label_7->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_7->raise();
         label_4->raise();
         loginButton->raise();
         registerButton->raise();
@@ -244,7 +247,6 @@ public:
         label_3->raise();
         label_5->raise();
         label_6->raise();
-        label_7->raise();
 
         retranslateUi(LoginPage);
 
@@ -259,7 +261,7 @@ public:
         clearAllButton->setText(QCoreApplication::translate("LoginPage", "clear all", nullptr));
         label->setText(QCoreApplication::translate("LoginPage", "Email", nullptr));
         label_2->setText(QCoreApplication::translate("LoginPage", "Password", nullptr));
-        errorLabel->setText(QCoreApplication::translate("LoginPage", "TextLabel", nullptr));
+        errorLabel->setText(QCoreApplication::translate("LoginPage", "Error: None", nullptr));
         label_3->setText(QCoreApplication::translate("LoginPage", "<div>\n"
 "<h1>Welcome user!</h1>\n"
 "<br>\n"
@@ -271,9 +273,9 @@ public:
 "", nullptr));
         label_4->setText(QString());
         label_5->setText(QCoreApplication::translate("LoginPage", "<h1>Login/Signup </h1>\n"
-"<hr style=\"background-color:'cyan'\" width=80%/>\n"
+"<hr style=\"background-color:'grey'\" width=80%/>\n"
 "", nullptr));
-        label_6->setText(QCoreApplication::translate("LoginPage", "<img src=\"E:\\School\\SemProject\\logo3.png\" width=300 style=\"opacity:0.1\"/>", nullptr));
+        label_6->setText(QCoreApplication::translate("LoginPage", "<img src=\":public/public/logo3.png\" width=300 style=\"opacity:0.1\"/>", nullptr));
         label_7->setText(QCoreApplication::translate("LoginPage", "<div>\n"
 "<h1>Let's Be Productive</h1>\n"
 "<hr style=\"background-color:'cyan'\" width=80%/>\n"

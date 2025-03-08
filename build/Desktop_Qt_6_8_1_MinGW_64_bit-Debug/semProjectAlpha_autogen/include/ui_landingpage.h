@@ -19,7 +19,7 @@ QT_BEGIN_NAMESPACE
 class Ui_LandingPage
 {
 public:
-    QLabel *label_2;
+    QLabel *logoLabel;
     QLabel *label;
 
     void setupUi(QWidget *LandingPage)
@@ -28,10 +28,10 @@ public:
             LandingPage->setObjectName("LandingPage");
         LandingPage->resize(1600, 1000);
         LandingPage->setStyleSheet(QString::fromUtf8(""));
-        label_2 = new QLabel(LandingPage);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(180, 120, 351, 261));
-        label_2->setStyleSheet(QString::fromUtf8("opacity:0.1"));
+        logoLabel = new QLabel(LandingPage);
+        logoLabel->setObjectName("logoLabel");
+        logoLabel->setGeometry(QRect(180, 120, 351, 261));
+        logoLabel->setStyleSheet(QString::fromUtf8("opacity:0.1"));
         label = new QLabel(LandingPage);
         label->setObjectName("label");
         label->setGeometry(QRect(160, 220, 1291, 551));
@@ -56,7 +56,7 @@ public:
     void retranslateUi(QWidget *LandingPage)
     {
         LandingPage->setWindowTitle(QCoreApplication::translate("LandingPage", "Form", nullptr));
-        label_2->setText(QCoreApplication::translate("LandingPage", "<img src=\"E:\\School\\SemProject\\logo3.png\" width=300 style=\"opacity:0.1\"/>", nullptr));
+        logoLabel->setText(QCoreApplication::translate("LandingPage", "<img src=\":public/public/logo3.png\" width=300 style=\"opacity:0.1\"/>", nullptr));
         label->setText(QCoreApplication::translate("LandingPage", "<div>\n"
 "<h1>Let's Be Productive</h1>\n"
 "<hr style=\"background-color:'cyan'\" width=80%/>\n"

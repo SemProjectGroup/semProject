@@ -12,7 +12,7 @@ GraphWidget::GraphWidget(QWidget *parent)
     chartView->setChart(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
 
-    chartView->setMinimumSize(800, 800);
+    chartView->setMinimumSize(800, 600);
 
     chart->setDropShadowEnabled(true);
 

@@ -730,12 +730,12 @@ public:
         label_5->setText(QCoreApplication::translate("PomodoroPage", "<h1>POMODORO TIMER</h1>\n"
 "<hr style=\"background-color:'cyan'\" width=80%/>\n"
 "", nullptr));
-        hourGlassImageLabel->setText(QCoreApplication::translate("PomodoroPage", "<img  src=\"E:\\School\\SemProject\\fullHourGlass.png\" />", nullptr));
+        hourGlassImageLabel->setText(QCoreApplication::translate("PomodoroPage", "<img  src=\":public/public/fullHourGlass.png\" />", nullptr));
         label_6->setText(QCoreApplication::translate("PomodoroPage", "       Set Timern       <hr  style=\"background-color:cyan\">", nullptr));
         timeLabel->setText(QCoreApplication::translate("PomodoroPage", "00:00", nullptr));
-        timerComboBox->setItemText(0, QCoreApplication::translate("PomodoroPage", "10 minutes", nullptr));
-        timerComboBox->setItemText(1, QCoreApplication::translate("PomodoroPage", "15 minutes", nullptr));
-        timerComboBox->setItemText(2, QCoreApplication::translate("PomodoroPage", "20 minutes", nullptr));
+        timerComboBox->setItemText(0, QCoreApplication::translate("PomodoroPage", "25 minutes", nullptr));
+        timerComboBox->setItemText(1, QCoreApplication::translate("PomodoroPage", "5 minutes", nullptr));
+        timerComboBox->setItemText(2, QCoreApplication::translate("PomodoroPage", "10 minutes", nullptr));
         timerComboBox->setItemText(3, QCoreApplication::translate("PomodoroPage", "30 minutes", nullptr));
         timerComboBox->setItemText(4, QCoreApplication::translate("PomodoroPage", "45 minutes", nullptr));
         timerComboBox->setItemText(5, QCoreApplication::translate("PomodoroPage", "60 minutes", nullptr));

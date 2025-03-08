@@ -79,6 +79,7 @@ void LoginPage::on_registerButton_clicked()
 
 void LoginPage::on_clearAllButton_clicked()
 {
-
+    ui->emailInput->setText("");
+    ui->passwordInput->setText("");
 }
 

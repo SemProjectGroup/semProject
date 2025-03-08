@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/public">
+        <file>public/emptyHourGlass.png</file>
+        <file>public/fullHourGlass.png</file>
+        <file>public/halfHourGlass.png</file>
+        <file>public/hourGlass.png</file>
+        <file>public/logo3.png</file>
+        <file>public/quarterHourGlass.png</file>
+        <file>public/threeQuarterHourGlass.png</file>
+        <file>public/time.png</file>
+    </qresource>
+</RCC>

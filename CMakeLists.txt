@@ -50,6 +50,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         FireBaseAuthManager.cpp
         loginpage.h loginpage.cpp loginpage.ui
         userData.h
+        public.qrc
 
     )
 # Define target properties for Android with Qt 6 as:

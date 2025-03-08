@@ -349,7 +349,8 @@
 		"C:/Qt/6.8.1/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.8.1/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
 		"C:/Qt/6.8.1/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
-		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
+		"C:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake",
+		"H:/semProjectAlpha/public.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "H:/semProjectAlpha",
 	"CROSS_CONFIG" : false,
@@ -382,6 +383,12 @@
 			null
 		],
 		[
+			"H:/semProjectAlpha/ToDoListPage.h",
+			"MU",
+			"EWIEGA46WW/moc_ToDoListPage.cpp",
+			null
+		],
+		[
 			"H:/semProjectAlpha/landingpage.h",
 			"MU",
 			"EWIEGA46WW/moc_landingpage.cpp",
@@ -409,12 +416,6 @@
 			"H:/semProjectAlpha/pomodoropage.h",
 			"MU",
 			"EWIEGA46WW/moc_pomodoropage.cpp",
-			null
-		],
-		[
-			"H:/semProjectAlpha/todolistpage.h",
-			"MU",
-			"EWIEGA46WW/moc_todolistpage.cpp",
 			null
 		],
 		[

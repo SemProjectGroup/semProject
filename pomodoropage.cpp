@@ -23,8 +23,8 @@ PomodoroPage::~PomodoroPage()
 void PomodoroPage::updateTimer()
 {
     int index = ui->timerComboBox->currentIndex();
-    int arrayOfTimeSpaces[]={10,15,20,30,45,60};
-    int timerDuration=10*60;
+    int arrayOfTimeSpaces[]={25,5,10,30,45,60};
+    int timerDuration=25;
     timerDuration= arrayOfTimeSpaces[index];
 
     if (timeLeft > 0) {
@@ -43,15 +43,15 @@ void PomodoroPage::updateTimer()
     //Or remove them all together (too unprofessional)
 
     if(timeLeft<= timerDuration/2){
-        ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/halfHourGlass.png' >");
+        ui->hourGlassImageLabel->setText("<img src=':public/public/halfHourGlass.png' >");
     }
 
     if(timeLeft<= 3*timerDuration/4){
-        ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/quarterHourGlass.png' >");
+        ui->hourGlassImageLabel->setText("<img src=':public/public/quarterHourGlass.png' >");
     }
 
     if(timeLeft<= 19*timerDuration/20){
-        ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/emptyHourGlass.png' >");
+        ui->hourGlassImageLabel->setText("<img src=':public/public/emptyHourGlass.png' >");
     }
 
 }
@@ -59,13 +59,13 @@ void PomodoroPage::updateTimer()
 void PomodoroPage::on_startTimerButton_clicked()
 {
     int index = ui->timerComboBox->currentIndex();
-    int arrayOfTimeSpaces[]={10,15,20,30,45,60};
-    int timerDuration=10*60;
+    int arrayOfTimeSpaces[]={25,5,10,30,45,60};
+    int timerDuration=25;
     timerDuration= arrayOfTimeSpaces[index];
     qDebug()<<"The timer is"<<timerDuration;
 
     //Need to work on the hourGlass images
-    ui->hourGlassImageLabel->setText("<img src='E:/School/SemProject/threeQuarterHourGlass.png' >");
+    ui->hourGlassImageLabel->setText("<img src=':public/public/threeQuarterHourGlass.png' >");
 
     if(ui->timeLabel->text()=="00:00"){
         timeLeft= timerDuration*60;
